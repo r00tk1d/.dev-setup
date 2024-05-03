@@ -15,15 +15,15 @@ handle_fail() {
 cd tasks
 chmod +x git-personal-setup.sh core-setup.sh node-setup.sh zsh-setup.sh dotfiles.sh productivity-tools.sh software.sh
 
-./core-setup.sh
-./git-personal-setup.sh
-./node-setup.sh
-./zsh-setup.sh
-# ./dotfiles.sh
-# ./productivity-tools.sh
-# ./software.sh
-# ./browser.sh
-# ./personal-software.sh
+source core-setup.sh
+# source git-personal-setup.sh
+# source node-setup.sh
+# source zsh-setup.sh
+# source dotfiles.sh
+# source productivity-tools.sh
+# source software.sh
+# source browser.sh
+# source personal-software.sh
 
 
 if [ -n "$FAILED_PACKAGES" ]; then
