@@ -8,10 +8,10 @@ echo "starting dev setup: work"
 cd tasks
 chmod +x git-personal-setup.sh core-setup.sh node-setup.sh zsh-setup.sh dotfiles.sh productivity-tools.sh software.sh
 
+./core-setup.sh
 ./git-personal-setup.sh
-# ./core-setup.sh
-# ./node-setup.sh
-# ./zsh-setup.sh
+./node-setup.sh
+./zsh-setup.sh
 # ./dotfiles.sh
 # ./productivity-tools.sh
 # ./software.sh
