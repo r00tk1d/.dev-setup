@@ -2,9 +2,6 @@
 
 echo "starting task: core-setup"
 
-# Install System Packages 0
-sudo apt install -y curl git software-properties-common
-
 # Install System Packages 1
 sudo apt install -y build-essential cmake pkg-config libpthread-stubs0-dev
 

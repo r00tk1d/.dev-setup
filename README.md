@@ -2,6 +2,11 @@ WIP
 
 My mostly automated Ubuntu setup using bash scripts and dotfiles.
 
+Clone Repo:
+```bash
+sudo apt update -y && sudo apt install -y curl git software-properties-common && cd ~ && git clone https://github.com/r00tk1d/dev_setup.git && cd dev_setup
+```
+
 Run my personal setup:
 ```bash
 cd bash_setup_scripts
