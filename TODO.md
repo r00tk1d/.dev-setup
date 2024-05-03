@@ -6,7 +6,7 @@ echo "https://jira.atlassian.com" >> .jira-url
 
 - set Settings in dotfiles -> scripts -> new_ticket.sh
 
-- install brave browser and import bookmarks
+- install brave browser and import bookmarks (from .dotfiles repo) and plugins (from .dotfiles repo)
 
 - convert shortcuts.ods in tsv or csv
 
@@ -19,6 +19,8 @@ echo "https://jira.atlassian.com" >> .jira-url
 - ubuntu settings (for example task bar apps)
 
 - (credential handling)
+
+- Ask for all user inputs in the beginning of the script?
 
 -apt-get vs apt
 

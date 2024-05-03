@@ -9,17 +9,18 @@ handle_fail() {
 
 
 cd tasks
-chmod +x git-work-setup.sh core-setup.sh node-setup.sh zsh-setup.sh dotfiles.sh productivity-tools.sh software.sh
+chmod +x git-work-setup.sh core-setup.sh node-setup.sh zsh-setup.sh dotfiles.sh java.sh productivity-tools.sh software.sh intellij.sh brave-browser.sh
 
 source core-setup.sh
 # source git-work-setup.sh
 # source node-setup.sh
 # source zsh-setup.sh
 # source dotfiles.sh
+# source java.sh
 # source productivity-tools.sh
 # source software.sh
+# source intellij.sh
 # source brave-browser.sh
-# source work-software.sh
 
 
 if [ -n "$FAILED_PACKAGES" ]; then
