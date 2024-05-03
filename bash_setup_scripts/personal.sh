@@ -8,14 +8,14 @@ echo "starting dev setup: work"
 cd tasks
 chmod +x git-personal-setup.sh core-setup.sh node-setup.sh zsh-setup.sh dotfiles.sh productivity-tools.sh software.sh
 
-/tasks/git-personal-setup.sh
-# ./tasks/core-setup.sh
-# ./tasks/node-setup.sh
-# ./tasks/zsh-setup.sh
-# ./tasks/dotfiles.sh
-# ./tasks/productivity-tools.sh
-# ./tasks/software.sh
-#./tasks/browser.sh
-#./tasks/personal-software.sh
+./git-personal-setup.sh
+# ./core-setup.sh
+# ./node-setup.sh
+# ./zsh-setup.sh
+# ./dotfiles.sh
+# ./productivity-tools.sh
+# ./software.sh
+# ./browser.sh
+# ./personal-software.sh
 
 echo "finished dev setup: work"
