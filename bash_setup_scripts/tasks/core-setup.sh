@@ -1,7 +1,5 @@
 #!/bin/bash
 
-echo "starting task: core-setup"
-
 # Install System Packages 1
 sudo apt -qq install -y build-essential || handle_fail "build-essential" 
 sudo apt -qq install -y cmake || handle_fail "cmake" 
@@ -18,6 +16,3 @@ sudo apt -qq install -y htop || handle_fail "htop"
 sudo apt -qq install -y lsof || handle_fail "lsof"
 sudo apt -qq install -y python3-pip || handle_fail "python3-pip"
 sudo apt -qq install -y moreutils || handle_fail "moreutils"
-
-
-echo "finished task: core-setup"

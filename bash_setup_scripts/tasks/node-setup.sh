@@ -1,10 +1,6 @@
 #!/bin/bash
 
-echo "starting task: node-setup"
+sudo apt -qq install -y nodejs || handle_fail "nodejs" 
+sudo apt -qq install -y npm || handle_fail "npm" 
 
-sudo apt update
-sudo apt install -y nodejs npm
-
-sudo npm install -g n
-
-echo "finished task: node-setup"
+sudo npm install -g n || handle_fail "n" 

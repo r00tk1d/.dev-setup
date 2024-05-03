@@ -1,21 +1,29 @@
 #!/bin/bash
 
-echo "starting dev setup: work"
+FAILED_PACKAGES=""
 
-sudo apt update -y
-sudo apt upgrade -y
+handle_fail() {
+    FAILED_PACKAGES="$FAILED_PACKAGES $1"
+    echo "Installation of $1 failed"
+}
+
 
 cd tasks
 chmod +x git-work-setup.sh core-setup.sh node-setup.sh zsh-setup.sh dotfiles.sh productivity-tools.sh software.sh
 
-./core-setup.sh
-./git-work-setup.sh
-./node-setup.sh
-./zsh-setup.sh
-# ./dotfiles.sh
-# ./productivity-tools.sh
-# ./software.sh
-# ./browser.sh
-# ./work-software.sh
+source core-setup.sh
+# source git-work-setup.sh
+# source node-setup.sh
+# source zsh-setup.sh
+# source dotfiles.sh
+# source productivity-tools.sh
+# source software.sh
+# source brave-browser.sh
+# source work-software.sh
 
-echo "finished dev setup: work"
+
+if [ -n "$FAILED_PACKAGES" ]; then
+    echo "Summary: Failed to install the following packages:$FAILED_PACKAGES"
+else
+    echo "Summary: All packages installed successfully"
+fi

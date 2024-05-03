@@ -2,9 +2,9 @@
 
 echo "starting task: software"
 
-sudo apt update
-sudo apt install -y libreoffice libreoffice-l10n-de keepassxc
+sudo apt -qq install -y gron || handle_fail "gron"
+sudo apt -qq install -y libreoffice-l10n-de || handle_fail "libreoffice-l10n-de"
+sudo apt -qq install -y keepassxc || handle_fail "keepassxc"
 
-# spotify, zoom, intellij
 
-echo "finished task: software"
+# TODO spotify, zoom, intellij

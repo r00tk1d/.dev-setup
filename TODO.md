@@ -20,5 +20,7 @@ echo "https://jira.atlassian.com" >> .jira-url
 
 - (credential handling)
 
+-apt-get vs apt
+
 Tools to test:
 entr xdotool eza zoxide bat xdotool

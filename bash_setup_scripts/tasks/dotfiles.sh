@@ -1,17 +1,11 @@
 #!/bin/bash
 
-echo "starting task: dotfiles"
-
-sudo apt update
-sudo apt install -y stow
+sudo apt -qq install -y stow || handle_fail "stow" 
 
 git clone git@github.com:r00tk1d/.dotfiles.git "$HOME/.dotfiles"
 
-cd "$HOME/.dotfiles" && ./ubuntu
-DOTFILE_DIRS=("zsh" "scripts")
+cd "$HOME/.dotfiles" && source stow_dirs
 
-for dir in "${DOTFILE_DIRS[@]}"; do
+for dir in "${STOW_DIRS[@]}"; do
     stow -v -R -t "$HOME" "$dir"
 done
-
-echo "finished task: dotfiles"

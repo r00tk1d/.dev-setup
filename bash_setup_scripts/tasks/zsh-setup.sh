@@ -1,15 +1,12 @@
 #!/bin/bash
 
-# Install Zsh
-sudo apt update
-sudo apt install -y zsh
+sudo apt -qq install -y zsh || handle_fail "zsh"
 
 # Change shell to Zsh
 chsh -s $(which zsh)
 
-# Check if Oh-My-Zsh directory exists WHY CHECK?
+# Install Oh-My-Zsh
 if [ ! -d "$HOME/.oh-my-zsh" ]; then
-    # Install Oh-My-Zsh
     curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh > ~/.oh-my-installer
     chmod +x ~/.oh-my-installer
     ~/.oh-my-installer
