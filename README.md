@@ -9,14 +9,10 @@ sudo apt update -y && sudo apt install -y curl git software-properties-common &&
 
 Run my personal setup:
 ```bash
-cd bash_setup_scripts
-chmod +x personal.sh
-./personal.sh
+cd bash_setup_scripts && chmod +x personal.sh && ./personal.sh
 ```
 
 Run my work setup:
 ```bash
-cd bash_setup_scripts
-chmod +x work.sh
-./work.sh
+cd bash_setup_scripts && chmod +x work.sh && ./work.sh
 ```
