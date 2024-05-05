@@ -10,7 +10,7 @@ handle_fail() {
 source values.sh || exit 1
 
 cd tasks
-chmod +x git-personal-setup.sh ssh.sh core-setup.sh node-setup.sh zsh-setup.sh dotfiles.sh java.sh productivity-tools.sh software.sh intellij.sh brave-browser.sh personal-software.sh
+chmod +x git-personal-setup.sh ssh.sh core-setup.sh node-setup.sh zsh-setup.sh dotfiles.sh java.sh productivity-tools.sh software.sh intellij-community.sh brave-browser.sh personal-software.sh
 
 # source core-setup.sh
 source git-personal-setup.sh
@@ -22,7 +22,7 @@ source git-personal-setup.sh
 # source productivity-tools.sh
 # source software.sh
 # source personal-software.sh
-# source intellij.sh || handle_fail "intellij"
+# source intellij-community.sh || handle_fail "intellij-community"
 # source brave-browser.sh || handle_fail "brave-browser"
 # source spotify.sh || handle_fail "spotify"
 

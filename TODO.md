@@ -16,7 +16,5 @@
 
 - (credential handling)
 
-- apt-get vs apt
-
 Tools to test:
 entr xdotool eza zoxide xdotool
