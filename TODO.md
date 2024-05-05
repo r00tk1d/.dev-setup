@@ -15,8 +15,6 @@
 
 - (credential handling)
 
-- Ask for all user inputs in the beginning of the script? Or define a variable file
-
 - apt-get vs apt
 
 Tools to test:

@@ -7,7 +7,7 @@ handle_fail() {
     echo "Installation of $1 failed"
 }
 
-source values # TODO check if every variable is set!!
+source values.sh || exit 1
 
 cd tasks
 chmod +x git-work-setup.sh ssh.sh core-setup.sh node-setup.sh zsh-setup.sh dotfiles.sh jira.sh java.sh productivity-tools.sh software.sh intellij.sh brave-browser.sh spotify.sh
