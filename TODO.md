@@ -1,6 +1,7 @@
 - set Settings in dotfiles -> scripts -> new_ticket.sh
 
 - (install brave browser) switch to chromium(?) and import bookmarks (from .dotfiles repo) and plugins (from .dotfiles repo)
+    - ~/.config/google-chrome/Default
 
 - convert shortcuts.ods in tsv or csv
 
@@ -18,4 +19,4 @@
 - apt-get vs apt
 
 Tools to test:
-entr xdotool eza zoxide bat xdotool
+entr xdotool eza zoxide xdotool
