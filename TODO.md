@@ -1,6 +1,6 @@
 - set Settings in dotfiles -> scripts -> new_ticket.sh
 
-- install brave browser and import bookmarks (from .dotfiles repo) and plugins (from .dotfiles repo)
+- (install brave browser) switch to chromium(?) and import bookmarks (from .dotfiles repo) and plugins (from .dotfiles repo)
 
 - convert shortcuts.ods in tsv or csv
 
@@ -17,7 +17,7 @@
 
 - Ask for all user inputs in the beginning of the script? Or define a variable file
 
--apt-get vs apt
+- apt-get vs apt
 
 Tools to test:
 entr xdotool eza zoxide bat xdotool
