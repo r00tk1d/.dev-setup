@@ -1,4 +1,4 @@
 #!/bin/bash
 
-git config --global user.name "Michael Hirsch"
-git config --global user.email "r00tk1d@users.noreply.github.com"
+git config --global user.name "$NAME"
+git config --global user.email "$PERSONAL_MAIL"

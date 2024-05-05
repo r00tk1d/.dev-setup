@@ -2,8 +2,7 @@
 
 
 # TODO: basic idea. Needs refinement, testing. Should also work for updating intellij without loosing settings! Ideally import the settings.zip from .dotfiles here too!
-read -p "Enter the IntelliJ version: " INTELLIJ_VERSION
-
+# https://www.jetbrains.com/help/idea/installation-guide.html#mcfxm5_178
 INSTALL_DIR="/opt"
 DOWNLOAD_LINK="https://download.jetbrains.com/idea/ideaIU-${INTELLIJ_VERSION}.tar.gz"
 INTELLIJ_DIR="${INSTALL_DIR}/idea-IU-${INTELLIJ_VERSION}"

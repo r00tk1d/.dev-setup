@@ -7,20 +7,24 @@ handle_fail() {
     echo "Installation of $1 failed"
 }
 
+source values # TODO check if every variable is set!!
 
 cd tasks
-chmod +x git-work-setup.sh core-setup.sh node-setup.sh zsh-setup.sh dotfiles.sh java.sh productivity-tools.sh software.sh intellij.sh brave-browser.sh
+chmod +x git-work-setup.sh core-setup.sh node-setup.sh zsh-setup.sh dotfiles.sh jira.sh java.sh productivity-tools.sh software.sh intellij.sh brave-browser.sh spotify.sh
 
 source core-setup.sh
 # source git-work-setup.sh
 # source node-setup.sh
 # source zsh-setup.sh
 # source dotfiles.sh
+# source jira.sh
 # source java.sh
 # source productivity-tools.sh
 # source software.sh
-# source intellij.sh
-# source brave-browser.sh
+# source intellij.sh || handle_fail "intellij"
+# source brave-browser.sh || handle_fail "brave-browser"
+# source spotify.sh || handle_fail "spotify"
+
 
 
 if [ -n "$FAILED_PACKAGES" ]; then

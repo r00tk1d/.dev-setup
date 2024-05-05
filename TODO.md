@@ -1,9 +1,3 @@
-- set jira url:
-```
-cd
-echo "https://jira.atlassian.com" >> .jira-url
-```
-
 - set Settings in dotfiles -> scripts -> new_ticket.sh
 
 - install brave browser and import bookmarks (from .dotfiles repo) and plugins (from .dotfiles repo)
@@ -12,15 +6,16 @@ echo "https://jira.atlassian.com" >> .jira-url
 
 - make scripts idempotent
 
-- clean up/remove all script
+- script for clean up/remove everything that is installed with this repo
 
 - startup skript (open todo.txt, open browser, open intellij ...)
+    ~/.config/autostart -> .dotfiles repo hinzufügen und stow
 
 - ubuntu settings (for example task bar apps)
 
 - (credential handling)
 
-- Ask for all user inputs in the beginning of the script?
+- Ask for all user inputs in the beginning of the script? Or define a variable file
 
 -apt-get vs apt
 
