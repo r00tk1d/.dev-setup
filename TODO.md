@@ -18,5 +18,7 @@
 
 - stow issue? If the dotfile already exist, stow wont overwrite it with the symlink
 
+- gedit dotfile
+
 Tools to test:
-entr xdotool eza zoxide xdotool
+entr xdotool eza zoxide
