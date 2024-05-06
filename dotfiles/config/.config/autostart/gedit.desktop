@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Exec=gedit Dokumente/todo.txt
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Name[de_DE]=TODOs
+Name=TODOs
+Comment[de_DE]=
+Comment=

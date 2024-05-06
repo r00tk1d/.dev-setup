@@ -10,14 +10,14 @@ handle_fail() {
 source values.sh || exit 1
 
 cd tasks
-chmod +x git-personal-setup.sh ssh.sh core-setup.sh node-setup.sh zsh-setup.sh dotfiles.sh java.sh productivity-tools.sh software.sh intellij-community.sh brave-browser.sh personal-software.sh
+chmod +x git-personal-setup.sh ssh.sh core-setup.sh node-setup.sh zsh-setup.sh stow-dotfiles.sh java.sh productivity-tools.sh software.sh intellij-community.sh brave-browser.sh personal-software.sh
 
+# source stow-dotfiles.sh
 # source core-setup.sh
 source git-personal-setup.sh
 # source ssh.sh
 # source node-setup.sh
 # source zsh-setup.sh
-# source dotfiles.sh
 # source java.sh
 # source productivity-tools.sh
 # source software.sh

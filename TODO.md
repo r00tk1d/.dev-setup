@@ -16,5 +16,7 @@
 
 - (credential handling)
 
+- stow issue? If the dotfile already exist, stow wont overwrite it with the symlink
+
 Tools to test:
 entr xdotool eza zoxide xdotool
