@@ -1,18 +1,13 @@
 #!/bin/bash
 
-
-# TODO: basic idea. Needs refinement, testing. Should also work for updating intellij without loosing settings! Ideally import the settings.zip from .dotfiles here too!
-# https://www.jetbrains.com/help/idea/installation-guide.html#mcfxm5_178
-if ! [[ -d "/opt/ideaIU" ]]; then
-    INSTALL_DIR="/opt"
+if [ ! -d /opt/idea-IU-* ]; then
     DOWNLOAD_LINK="https://download.jetbrains.com/idea/ideaIU-${INTELLIJ_VERSION}.tar.gz"
-    INTELLIJ_DIR="/opt/ideaIU"
 
-    wget -qO /tmp/intellij.tar.gz "${DOWNLOAD_LINK}"
+    wget -O /tmp/intellij.tar.gz "${DOWNLOAD_LINK}"
     sudo tar -xzf /tmp/intellij.tar.gz -C /opt
 
     rm /tmp/intellij.tar.gz
 
-    sudo ln -s "${INTELLIJ_DIR}/bin/idea.sh" /usr/local/bin/intellij
+    sudo ln -s /opt/idea-IU-*/bin/idea.sh /usr/local/bin/intellij
 fi
 

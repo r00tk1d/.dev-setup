@@ -14,10 +14,6 @@
 	- ~/.config/dconf/user  <-add to dotfiles after a clean ubuntu setup with gedit and favorite bar is set manuallu correct. then stow
 - (credential handling)
 
-- stow issue? If the dotfile already exist, stow wont overwrite it with the symlink
-
-- gedit dotfile
-
 - cleanup intellij (settings) and export to this repo
 
 Tools to test:
