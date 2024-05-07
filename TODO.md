@@ -1,4 +1,4 @@
-- set Settings in dotfiles -> scripts -> new_ticket.sh
+- migrate new_ticket.sh, worktime.sh 
 
 - brave browser plugins dotfile
     https://www.chromium.org/administrators/pre-installed-extensions/
