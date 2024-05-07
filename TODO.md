@@ -16,5 +16,9 @@
 
 - cleanup intellij (settings) and export to this repo
 
+- rename to .dev_setup?
+
+- decide for more verbose/quiet output
+
 Tools to test:
 entr xdotool eza zoxide
