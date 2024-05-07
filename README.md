@@ -18,3 +18,5 @@ Run my work setup:
 ```bash
 cd bash_setup_scripts && chmod +x work.sh && ./work.sh
 ```
+
+The last run is logged in `setup_scripts/log.out`.
