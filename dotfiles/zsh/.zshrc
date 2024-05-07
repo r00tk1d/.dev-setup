@@ -101,6 +101,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias bat=batcat
+alias mdir='f() { mkdir -p $1 && cd "$_" };f'
 alias cht='f() { curl -s cht.sh/$1 | less };f'
 alias jn='jira new'
 alias dockerstopall='docker stop $(docker ps -a -q)'

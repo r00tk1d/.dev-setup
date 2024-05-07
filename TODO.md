@@ -11,7 +11,7 @@
 - script for clean up/remove everything that is installed with this repo
 
 - ubuntu settings (for example task bar apps)
-
+	- ~/.config/dconf/user  <-add to dotfiles after a clean ubuntu setup with gedit and favorite bar is set manuallu correct. then stow
 - (credential handling)
 
 - stow issue? If the dotfile already exist, stow wont overwrite it with the symlink
