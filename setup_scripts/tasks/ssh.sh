@@ -9,3 +9,5 @@ if ! [[ -f ".ssh/id_ed25519" ]]; then
   eval "$(ssh-agent -s)"
   ssh-add ~/.ssh/id_ed25519
 fi
+
+cd "$HOME/dev_setup/setup_scripts/tasks"

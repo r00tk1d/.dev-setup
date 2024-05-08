@@ -12,3 +12,5 @@ else
     stow -v -t "$HOME" * --adopt
     git reset --hard
 fi
+
+cd "$HOME/dev_setup/setup_scripts/tasks"

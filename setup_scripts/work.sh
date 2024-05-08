@@ -10,7 +10,7 @@ handle_fail() {
     echo "Installation of $1 failed"
 }
 
-source values.sh || exit 1
+source work_values.sh || exit 1
 
 cd tasks
 chmod +x git-work-setup.sh ssh.sh core-setup.sh node-setup.sh zsh-setup.sh stow-dotfiles.sh jira.sh java.sh productivity-tools.sh software.sh intellij-ultimate.sh brave-browser.sh spotify.sh

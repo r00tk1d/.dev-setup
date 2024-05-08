@@ -1,12 +1,8 @@
 declare -a values=("WORK_MAIL" "JIRA_URL" "INTELLIJ_VERSION" "NAME" "PERSONAL_MAIL")
 
-WORK_MAIL=
-JIRA_URL=
-
-INTELLIJ_VERSION="2024.1.1"
-
 NAME="Michael Hirsch"
 PERSONAL_MAIL="r00tk1d@users.noreply.github.com"
+INTELLIJ_VERSION="2024.1.1"
 
 
 
