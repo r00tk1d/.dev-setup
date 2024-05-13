@@ -29,6 +29,14 @@
                "type": "url",
                "url": "https://jsonlint.com/"
             }, {
+               "date_added": "13356611431000000",
+               "date_last_used": "0",
+               "guid": "73065236-2521-4163-b89f-bfd217ce4338",
+               "id": "15",
+               "name": "HTTP Status Codes Cheat Sheet by kstep - Download free from Cheatography - Cheatography.com: Cheat Sheets For Every Occasion",
+               "type": "url",
+               "url": "https://cheatography.com/kstep/cheat-sheets/http-status-codes/"
+            }, {
                "date_added": "13358512372000000",
                "date_last_used": "0",
                "guid": "907c0a60-ce24-42a9-9d0e-e3f66c4637b8",
@@ -103,7 +111,45 @@
             "id": "48",
             "name": "Impr",
             "type": "folder"
-         } ]
+         } ],
+         "date_added": "13359470402761485",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
+         "id": "1",
+         "name": "Lesezeichen",
+         "type": "folder"
+      },
+      "other": {
+         "children": [ {
+            "date_added": "13359472234475669",
+            "date_last_used": "0",
+            "guid": "6db6b756-7e17-4d74-9ad1-c33f8fd44cba",
+            "id": "5",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Willkommen bei Brave",
+            "type": "url",
+            "url": "chrome://welcome/"
+         } ],
+         "date_added": "13359470402761488",
+         "date_last_used": "0",
+         "date_modified": "13359472234475669",
+         "guid": "82b081ec-3dd3-529c-8475-ab6c344590dd",
+         "id": "2",
+         "name": "Weitere Lesezeichen",
+         "type": "folder"
+      },
+      "synced": {
+         "children": [  ],
+         "date_added": "13359470402761489",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "4cf2e351-0e85-532b-bb37-df045d8f8d0f",
+         "id": "3",
+         "name": "Mobile Lesezeichen",
+         "type": "folder"
       }
    },
    "version": 1
