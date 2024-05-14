@@ -14,21 +14,21 @@ handle_fail() {
 source personal_values.sh || exit 1
 
 cd ~/dev_setup/setup_scripts/tasks
-chmod +x git-personal-setup.sh ssh.sh core-setup.sh node-setup.sh zsh-setup.sh stow-dotfiles.sh java.sh productivity-tools.sh software.sh intellij-community.sh brave-browser.sh personal-software.sh
 
-source core-setup.sh
-source stow-dotfiles.sh
-source git-personal-setup.sh
-source ssh.sh
-source node-setup.sh
-source zsh-setup.sh
-source java.sh
-source productivity-tools.sh
-source software.sh
-source personal-software.sh
-source intellij-community.sh || handle_fail "intellij-community"
-source brave-browser.sh || handle_fail "brave-browser"
-source spotify.sh || handle_fail "spotify"
+chmod +x core-setup.sh && source core-setup.sh
+chmod +x stow-dotfiles.sh && source stow-dotfiles.sh
+chmod +x git-personal-setup.sh && source git-personal-setup.sh
+chmod +x ssh.sh && source ssh.sh
+chmod +x node-setup.sh && source node-setup.sh
+chmod +x zsh-setup.sh && source zsh-setup.sh
+chmod +x java.sh && source java.sh
+chmod +x docker.sh && source docker.sh || handle_fail "docker"
+chmod +x productivity-tools.sh && source productivity-tools.sh
+chmod +x software.sh && source software.sh
+chmod +x personal-software.sh && source personal-software.sh
+chmod +x intellij-community.sh && source intellij-community.sh || handle_fail "intellij-community"
+chmod +x brave-browser.sh && source brave-browser.sh || handle_fail "brave-browser"
+chmod +x spotify.sh && source spotify.sh || handle_fail "spotify"
 
 
 if [ -n "$FAILED_PACKAGES" ]; then

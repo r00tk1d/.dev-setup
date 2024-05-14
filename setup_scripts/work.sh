@@ -13,21 +13,21 @@ handle_fail() {
 source work_values.sh || exit 1
 
 cd tasks
-chmod +x git-work-setup.sh ssh.sh core-setup.sh node-setup.sh zsh-setup.sh stow-dotfiles.sh jira.sh java.sh productivity-tools.sh software.sh intellij-ultimate.sh brave-browser.sh spotify.sh
 
-# source core-setup.sh
-source stow-dotfiles.sh
-# source git-work-setup.sh
-# source ssh.sh
-# source node-setup.sh
-# source zsh-setup.sh
-# source jira.sh
-source java.sh
-# source productivity-tools.sh
-# source software.sh
-source intellij-ultimate.sh || handle_fail "intellij-ultimate"
-# source brave-browser.sh || handle_fail "brave-browser"
-# source spotify.sh || handle_fail "spotify"
+chmod +x core-setup.sh && source core-setup.sh
+chmod +x stow-dotfiles.sh && source stow-dotfiles.sh
+chmod +x git-work-setup.sh && source git-work-setup.sh
+chmod +x ssh.sh && source ssh.sh
+chmod +x node-setup.sh && source node-setup.sh
+chmod +x zsh-setup.sh && source zsh-setup.sh
+chmod +x jira.sh && source jira.sh
+chmod +x java.sh && source java.sh
+chmod +x docker.sh && source docker.sh || handle_fail "docker"
+chmod +x productivity-tools.sh && source productivity-tools.sh
+chmod +x software.sh && source software.sh
+chmod +x intellij-ultimate.sh && source intellij-ultimate.sh || handle_fail "intellij-ultimate"
+chmod +x brave-browser.sh && source brave-browser.sh || handle_fail "brave-browser"
+chmod +x spotify.sh && source spotify.sh || handle_fail "spotify"
 
 
 
