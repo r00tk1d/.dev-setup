@@ -4,7 +4,7 @@ My mostly automated Ubuntu setup using bash scripts and dotfiles.
 
 ## 1. Clone Repo:
 ```bash
-sudo apt-get update -y && sudo apt-get install -y curl git software-properties-common && cd ~ && git clone https://github.com/r00tk1d/dev_setup.git && cd dev_setup
+sudo apt-get update -y && sudo apt-get install -y curl git software-properties-common && cd ~ && git clone https://github.com/r00tk1d/dev_setup.git
 ```
 
 ## 2. Run Setup Script:
@@ -24,3 +24,4 @@ cd ~/dev_setup/setup_scripts && chmod +x work.sh && ./work.sh
 ```
 
 ## 3. Apply Manual Settings
+All setting files are inside the directory `~/dev_setup/manual_settings/`.
