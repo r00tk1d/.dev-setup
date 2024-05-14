@@ -1,4 +1,4 @@
-declare -a values=("WORK_MAIL" "JIRA_URL" "INTELLIJ_VERSION" "NAME" "PERSONAL_MAIL")
+declare -a values=("NAME" "PERSONAL_MAIL" "INTELLIJ_VERSION")
 
 NAME="Michael Hirsch"
 PERSONAL_MAIL="r00tk1d@users.noreply.github.com"
