@@ -23,3 +23,4 @@ cd ~/dev_setup/setup_scripts && chmod +x personal.sh && ./personal.sh
 cd ~/dev_setup/setup_scripts && chmod +x work.sh && ./work.sh
 ```
 
+## 3. Apply Manual Settings

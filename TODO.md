@@ -20,6 +20,8 @@
 
 - decide for more verbose/quiet output
 
+- add README.md in manual_settings folder
+
 Things to test:
 - Application Launcher: Ulaunch, Albert
 - Text expander: Expanso

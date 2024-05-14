@@ -2,7 +2,7 @@ declare -a values=("WORK_MAIL" "JIRA_URL" "INTELLIJ_VERSION" "NAME" "PERSONAL_MA
 
 NAME="Michael Hirsch"
 WORK_MAIL=
-JIRA_URL=
+JIRA_URL= # also set the jira url in "manual_settings/work_bookmarks.html" and "manual_settings/work_vimium-options.json"
 INTELLIJ_VERSION="2024.1.1"
 
 
