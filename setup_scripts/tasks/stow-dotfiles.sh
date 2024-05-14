@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo apt -q install -y stow || handle_fail "stow" 
+sudo apt-get -q install -y stow || handle_fail "stow" 
 
 cd "$HOME/dev_setup/dotfiles"
 

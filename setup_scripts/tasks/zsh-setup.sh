@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo apt -q install -y zsh || handle_fail "zsh"
+sudo apt-get -q install -y zsh || handle_fail "zsh"
 
 # Change shell to Zsh
 chsh -s $(which zsh)
