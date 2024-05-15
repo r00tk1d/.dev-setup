@@ -30,6 +30,7 @@ Things to test:
 - eza
 - zoxide
 - homerow mods (knomad, qmk) https://precondition.github.io/home-row-mods
+- remap caps lock: to esc? delete? ctrl?
 - vimium vomnibar custom: https://jdhao.github.io/2023/04/18/vimium_custom_search_engine/ 
 - i3, polybar
 - keepassxc chrome extension
