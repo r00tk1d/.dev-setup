@@ -35,3 +35,4 @@ Things to test:
 - i3, polybar
 - keepassxc chrome extension
 - adjust shortcuts to have the same meaning in different applications. e.g. Alt+left/right, F2, strg z strg y, etc.
+- add more shortcuts for all used programs (e.g. brave browser, spotify, etc.)
