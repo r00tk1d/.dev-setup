@@ -15,7 +15,6 @@ source work_values.sh || exit 1
 cd tasks
 
 chmod +x core-setup.sh && source core-setup.sh
-chmod +x stow-dotfiles.sh && source stow-dotfiles.sh
 chmod +x git-work-setup.sh && source git-work-setup.sh
 chmod +x ssh.sh && source ssh.sh
 chmod +x node-setup.sh && source node-setup.sh
@@ -28,6 +27,7 @@ chmod +x software.sh && source software.sh
 chmod +x intellij-ultimate.sh && source intellij-ultimate.sh || handle_fail "intellij-ultimate"
 chmod +x brave-browser.sh && source brave-browser.sh || handle_fail "brave-browser"
 chmod +x spotify.sh && source spotify.sh || handle_fail "spotify"
+chmod +x stow-dotfiles.sh && source stow-dotfiles.sh
 
 
 

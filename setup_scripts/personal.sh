@@ -16,7 +16,6 @@ source personal_values.sh || exit 1
 cd ~/dev_setup/setup_scripts/tasks
 
 chmod +x core-setup.sh && source core-setup.sh
-chmod +x stow-dotfiles.sh && source stow-dotfiles.sh
 chmod +x git-personal-setup.sh && source git-personal-setup.sh
 chmod +x ssh.sh && source ssh.sh
 chmod +x node-setup.sh && source node-setup.sh
@@ -29,6 +28,7 @@ chmod +x personal-software.sh && source personal-software.sh
 chmod +x intellij-community.sh && source intellij-community.sh || handle_fail "intellij-community"
 chmod +x brave-browser.sh && source brave-browser.sh || handle_fail "brave-browser"
 chmod +x spotify.sh && source spotify.sh || handle_fail "spotify"
+chmod +x stow-dotfiles.sh && source stow-dotfiles.sh
 
 
 if [ -n "$FAILED_PACKAGES" ]; then

@@ -7,9 +7,7 @@ chsh -s $(which zsh)
 
 # Install Oh-My-Zsh
 if [ ! -d "$HOME/.oh-my-zsh" ]; then
-    curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh > ~/.oh-my-installer
-    chmod +x ~/.oh-my-installer
-    ~/.oh-my-installer
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 fi
 
 # Install zsh-autosuggestions plugin
