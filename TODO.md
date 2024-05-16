@@ -37,3 +37,5 @@ Things to test:
 - keepassxc chrome extension
 - adjust shortcuts to have the same meaning in different applications. e.g. Alt+left/right, F2, strg z strg y, etc.
 - add more shortcuts for all used programs (e.g. brave browser, spotify, etc.)
+- powerlevel10k
+- zsh-syntax-highlighting, zsh-completions
