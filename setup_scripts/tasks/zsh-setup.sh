@@ -3,7 +3,7 @@
 sudo apt-get -q install -y zsh || handle_fail "zsh"
 
 # Change shell to Zsh
-sudo chsh -s $(which zsh)
+chsh -s $(which zsh)
 
 # Install Oh-My-Zsh
 if [ ! -d "$HOME/.oh-my-zsh" ]; then
