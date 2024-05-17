@@ -3,6 +3,7 @@ Vor finalem install:
 - gnome-settings.sh einbinden und testen. gnome-settings.ini exportieren nach durchlauf des scripts und mit dem hier im repo abgleichen\
 - maus scroll geschwindigkeit anpassen
 - einmal durchlaufen lassen und alle commands testen
+- https://help.ubuntu.com/stable/ubuntu-help/session-fingerprint.html.en
 
 
 
@@ -38,7 +39,6 @@ Things to test:
 - Application Launcher: Ulaunch, Albert
 - Text expander: Expanso
 - entr 
-- xdotool 
 - eza
 - zoxide
 - zellij
