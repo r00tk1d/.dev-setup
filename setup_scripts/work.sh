@@ -29,6 +29,7 @@ chmod +x vscode.sh && source vscode.sh || handle_fail "vscode"
 chmod +x brave-browser.sh && source brave-browser.sh || handle_fail "brave-browser"
 chmod +x spotify.sh && source spotify.sh || handle_fail "spotify"
 chmod +x stow-dotfiles.sh && source stow-dotfiles.sh
+chmod +x load-gnome-settings.sh && source load-gnome-settings.sh || handle_fail "load-gnome-settings"
 
 
 
