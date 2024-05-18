@@ -1,5 +1,4 @@
 Vor finalem install:
-- durchlaufen lassen und .bashrc mit export PATH aus zsh zu dotfiles hinzufuegen 
 - maus scroll geschwindigkeit anpassen (https://askubuntu.com/questions/1413750/how-to-change-2-finger-touchpad-scroll-speed-on-ubuntu-22-04)
 - gnome settings anpassen und diffs gleichzeitig checken -> in gnome-settings.ini im repo ergänzen (entr nutzen? wenns gut funktioniert auch adden zum setup skript)
 - einmal durchlaufen lassen und alle commands testen
