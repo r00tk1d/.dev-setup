@@ -36,6 +36,5 @@ else
     echo "Summary: All packages installed successfully"
 fi
 
-echo "Logging out to apply settings in 10 seconds..."
-sleep 10
+echo "Logging out to apply settings..."
 gnome-session-quit
