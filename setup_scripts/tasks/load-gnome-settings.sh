@@ -1,5 +1,5 @@
 #!/bin/bash
 
-cd ~/dev_setup/dotfiles/gnome-settings.ini
+cd ~/dev_setup/dotfiles
 
 dconf load / < gnome-settings.ini
