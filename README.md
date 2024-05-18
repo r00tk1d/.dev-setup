@@ -1,6 +1,4 @@
-WIP
-
-My mostly automated Ubuntu setup using bash scripts and dotfiles.
+My mostly automated Debian/GNOME setup using bash scripts and dotfiles.
 
 ## 1. Clone Repo:
 ```bash
