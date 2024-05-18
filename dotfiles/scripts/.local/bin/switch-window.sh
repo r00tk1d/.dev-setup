@@ -11,6 +11,20 @@ if [ $# -ne 2 ]; then
     exit 1
 fi
 
+# Check if wmctrl is installed
+if ! command -v wmctrl &> /dev/null; then
+    echo "wmctrl is not installed. Please install it and try again."
+    notify-send "Error" "wmctrl is not installed. Please install it and try again."
+    exit 1
+fi
+
+# Check if xdotool is installed
+if ! command -v xdotool &> /dev/null; then
+    echo "xdotool is not installed. Please install it and try again."
+    notify-send "Error" "xdotool is not installed. Please install it and try again."
+    exit 1
+fi
+
 APP_COMMAND=$1 # for example: intellij
 APP_CLASS=$2 # find out with: `xprop | grep -i class` and click on the window (e.g. IntelliJ)
 
