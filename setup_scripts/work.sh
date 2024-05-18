@@ -38,4 +38,5 @@ fi
 
 
 echo "Logging out to apply settings..."
+sleep 3
 gnome-session-quit
