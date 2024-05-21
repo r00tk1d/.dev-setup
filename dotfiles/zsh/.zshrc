@@ -106,6 +106,8 @@ alias cht='f() { curl -s cht.sh/$1 | less };f'
 alias jn='jira new'
 alias dockerstopall='docker stop $(docker ps -a -q)'
 alias dockerreno='docker update --restart=no $(docker ps -a -q)'
+alias fx='nautilus'
+
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
