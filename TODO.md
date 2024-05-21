@@ -1,18 +1,6 @@
-Vor finalem install:
-- maus scroll geschwindigkeit anpassen (https://askubuntu.com/questions/1413750/how-to-change-2-finger-touchpad-scroll-speed-on-ubuntu-22-04)
-- gnome settings anpassen und diffs gleichzeitig checken -> in gnome-settings.ini im repo ergänzen (entr nutzen? wenns gut funktioniert auch adden zum setup skript)
-- einmal durchlaufen lassen und alle commands testen
-- https://help.ubuntu.com/stable/ubuntu-help/session-fingerprint.html.en
-
-
-
-
-
-
-
 - migrate new_ticket.sh, worktime.sh 
 
-- brave browser plugins dotfile
+- brave browser plugins and user settings dotfile
     https://www.chromium.org/administrators/pre-installed-extensions/
     - Bookmarks dotfile .config/BraveSoftware/Brave-Browser/Default/Bookmarks cleanup
 
@@ -21,9 +9,6 @@ Vor finalem install:
 - make scripts idempotent
 
 - script for clean up/remove everything that is installed with this repo
-
-- ubuntu settings (for example task bar apps)
-	- ~/.config/dconf/user  <-add to dotfiles after a clean ubuntu setup with gedit and favorite bar is set manuallu correct. then stow
 - (credential handling)
 
 - cleanup intellij (settings) and export to this repo
@@ -47,6 +32,5 @@ Things to test:
 - i3, polybar
 - keepassxc chrome extension
 - adjust shortcuts to have the same meaning in different applications. e.g. Alt+left/right, F2, strg z strg y, etc.
-- add more shortcuts for all used programs (e.g. brave browser, spotify, etc.)
 - powerlevel10k
-- zsh-syntax-highlighting, zsh-completions
+- zsh-completions
