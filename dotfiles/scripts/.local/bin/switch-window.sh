@@ -7,7 +7,7 @@
 
 # Ensure that both the application command and class are provided
 if [ $# -ne 2 ]; then
-    echo "Usage: $0 <app_command> <app_class>"
+    echo "Usage: $0 <app_command> <app_class>. Find out app_class with: xprop | grep -i class"
     exit 1
 fi
 
