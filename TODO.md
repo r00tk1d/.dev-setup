@@ -1,3 +1,5 @@
+- overthink stow..
+
 - migrate new_ticket.sh, worktime.sh 
 
 - brave browser plugins and user settings dotfile
