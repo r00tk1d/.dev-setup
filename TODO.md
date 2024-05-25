@@ -26,7 +26,6 @@ Things to test:
 - Text expander: Expanso
 - entr 
 - eza
-- zoxide
 - zellij
 - homerow mods (knomad, qmk) https://precondition.github.io/home-row-mods
 - remap caps lock: to esc? delete? ctrl?
