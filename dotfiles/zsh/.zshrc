@@ -107,7 +107,6 @@ alias jn='jira new'
 alias dockerstopall='docker stop $(docker ps -a -q)'
 alias dockerreno='docker update --restart=no $(docker ps -a -q)'
 alias fx=nautilus
-alias cd=z
 
 eval "$(zoxide init zsh)"
 
