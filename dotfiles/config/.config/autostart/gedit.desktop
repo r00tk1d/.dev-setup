@@ -1,6 +1,6 @@
 [Desktop Entry]
 Type=Application
-Exec=touch ~/.todo.txt && gedit ~/.todo.txt
+Exec=gedit ./.todo.txt
 Hidden=false
 NoDisplay=false
 X-GNOME-Autostart-enabled=true
