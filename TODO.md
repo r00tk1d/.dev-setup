@@ -1,4 +1,3 @@
-- overthink stow..
 
 - migrate new_ticket.sh, worktime.sh 
 
@@ -20,6 +19,8 @@
 - decide for more verbose/quiet output
 
 - add README.md in manual_settings folder
+
+- switch-window.sh: currently might not focusing the last used window from app A if switching from App B to App A. It focuses the last opened window. This might be non trivial to adjust but would be an improvement
 
 Things to test:
 - Application Launcher: Ulaunch, Albert
