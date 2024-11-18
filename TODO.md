@@ -23,6 +23,7 @@
 - switch-window.sh: currently might not focusing the last used window from app A if switching from App B to App A. It focuses the last opened window. This might be non trivial to adjust but would be an improvement
 
 Things to test:
+https://github.com/ibraheemdev/modern-unix
 - Application Launcher: Ulaunch, Albert
 - Text expander: Expanso
 - entr 
