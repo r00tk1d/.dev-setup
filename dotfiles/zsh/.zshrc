@@ -71,7 +71,7 @@ ZSH_THEME="gnzh"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git dirhistory jira fzf zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git dirhistory jira fzf zsh-autosuggestions zsh-syntax-highlighting mvn)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -101,14 +101,7 @@ eval "$(zoxide init zsh)"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias bat=batcat
-alias mdir='f() { mkdir -p $1 && cd "$_" };f'
-alias cht='f() { curl -s cht.sh/$1 | less };f'
-alias jn='jira new'
-alias dockerstopall='docker stop $(docker ps -a -q)'
-alias dockerreno='docker update --restart=no $(docker ps -a -q)'
-alias fx=nautilus
-alias cd=z
+source $HOME/.aliases
 
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
