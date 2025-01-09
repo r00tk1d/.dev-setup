@@ -1,8 +1,18 @@
-alias bat=batcat
+alias bat="batcat"
 alias mdir='f() { mkdir -p $1 && cd "$_" };f'
 alias cht='f() { curl -s cht.sh/$1 | less };f'
-alias jn='jira new'
+alias jn="jira new"
+alias fx="nautilus"
+alias cd="z"
+
+# docker
 alias dockerstopall='docker stop $(docker ps -a -q)'
 alias dockerreno='docker update --restart=no $(docker ps -a -q)'
-alias fx=nautilus
-alias cd=z
+
+# Replace ls with eza
+alias ls="eza"
+alias ll="eza --long --group-directories-first --header --time-style long-iso --no-user -s type"
+alias la='eza --all --long --group-directories-first --header --time-style long-iso --no-user -s type'
+alias lt='eza --tree --level=2'
+alias ltt='eza --tree --level=3'
+alias lttt='eza --tree --level=4'
