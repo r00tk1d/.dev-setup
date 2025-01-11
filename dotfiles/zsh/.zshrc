@@ -71,7 +71,7 @@ ZSH_THEME="gnzh"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git dirhistory jira fzf zsh-autosuggestions zsh-syntax-highlighting mvn)
+plugins=(git dirhistory jira fzf zsh-autosuggestions zsh-syntax-highlighting mvn fzf-tab)
 
 source $ZSH/oh-my-zsh.sh
 
