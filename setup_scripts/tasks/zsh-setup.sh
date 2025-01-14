@@ -22,5 +22,5 @@ fi
 
 # Install fzf-tab plugin
 if [ ! -d "$HOME/.oh-my-zsh/plugins/fzf-tab" ]; then
-    git clone https://github.com/Aloxaf/fzf-tab ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/fzf-tab
+    git clone https://github.com/Aloxaf/fzf-tab ~/.oh-my-zsh/plugins/fzf-tab
 fi
