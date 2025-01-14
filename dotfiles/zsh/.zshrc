@@ -11,6 +11,16 @@ export ZSH="$HOME/.oh-my-zsh"
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="gnzh"
 
+# copy current typed line to clipboard with ^y
+if [[ -n $DISPLAY ]]; then
+    copy_line_to_x_clipboard() {
+        echo -n $BUFFER | xclip -selection clipboard
+        zle reset-prompt
+    }
+    zle -N copy_line_to_x_clipboard
+    bindkey '^Y' copy_line_to_x_clipboard
+fi
+
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in $ZSH/themes/
