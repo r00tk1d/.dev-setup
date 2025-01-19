@@ -25,9 +25,9 @@
 Things to test:
 https://github.com/ibraheemdev/modern-unix
 - Application Launcher: Ulaunch, Albert
+- rofi, dmenu
 - Text expander: Expanso
 - entr 
-- eza
 - zellij
 - homerow mods (knomad, qmk) https://precondition.github.io/home-row-mods
 - remap caps lock: to esc? delete? ctrl?
@@ -37,3 +37,8 @@ https://github.com/ibraheemdev/modern-unix
 - adjust shortcuts to have the same meaning in different applications. e.g. Alt+left/right, F2, strg z strg y, etc.
 - powerlevel10k
 - zsh-completions
+- lazydocker
+- lazygit
+- k9s
+
+idea: launch everything from commandline and use something like dmenu to quickly use aliases for launching/switching etc.

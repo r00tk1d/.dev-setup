@@ -1,9 +1,12 @@
 alias bat="batcat"
 alias mdir='f() { mkdir -p $1 && cd "$_" };f'
 alias cht='f() { curl -s cht.sh/$1 | less };f'
-alias jn="jira new"
-alias fx="nautilus"
+alias xo="xdg-open" 
 alias cd="z"
+
+# jira zsh plugin
+alias jb="jira branch"
+alias jn="jira new"
 
 # docker
 alias dockerstopall='docker stop $(docker ps -a -q)'
