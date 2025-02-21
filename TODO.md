@@ -40,5 +40,6 @@ https://github.com/ibraheemdev/modern-unix
 - lazydocker
 - lazygit
 - k9s
+- ripgrep-all !!!
 
 idea: launch everything from commandline and use something like dmenu to quickly use aliases for launching/switching etc.

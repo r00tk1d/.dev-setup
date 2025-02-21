@@ -1,6 +1,6 @@
 alias bat="batcat"
-alias fpv="fzf --preview 'batcat --style=numbers --color=always {}' --preview-window=up:50% --bind 'enter:execute(batcat {})'"
-
+# recursive fuzzy search for file NAME starting in the current directory and open the selected file in vs code
+alias fpv="fzf --preview 'batcat --style=numbers --color=always {}' --preview-window=up:50% --bind 'enter:execute(code {})'"
 alias mdir='f() { mkdir -p $1 && cd "$_" };f'
 alias cht='f() { curl -s cht.sh/$1 | less };f'
 alias timer="timer.sh"
