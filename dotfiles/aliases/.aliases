@@ -14,11 +14,3 @@ alias jn="jira new"
 # docker
 alias dockerstopall='docker stop $(docker ps -a -q)'
 alias dockerreno='docker update --restart=no $(docker ps -a -q)'
-
-# Replace ls with eza
-alias ls="eza"
-alias ll="eza --long --group-directories-first --header --time-style long-iso --no-user -s type"
-alias la='eza --all --long --group-directories-first --header --time-style long-iso --no-user -s type'
-alias lt='eza --tree --level=2'
-alias ltt='eza --tree --level=3'
-alias lttt='eza --tree --level=4'

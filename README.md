@@ -1,5 +1,7 @@
 My mostly automated Debian/GNOME setup using bash scripts and dotfiles.
 
+# Quickstart
+
 ## 1. Clone Repo:
 ```bash
 sudo apt-get update -y && sudo apt-get install -y curl git software-properties-common && cd ~ && git clone https://github.com/r00tk1d/dev_setup.git
@@ -23,3 +25,13 @@ cd ~/dev_setup/setup_scripts && chmod +x work.sh && ./work.sh
 
 ## 3. Apply Manual Settings
 All setting files are inside the directory `~/dev_setup/manual_settings/`.
+
+# Why?
+
+## setup tools
+- bash script
+
+
+## Keyboard
+- EurKEY Layout for german special chars äöüß (https://eurkey.steffen.bruentjen.eu/?lang=de)
+- (on top the Kenkyo layout (https://github.com/argenkiwi/kenkyo) with keyd)
