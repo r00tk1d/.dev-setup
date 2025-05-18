@@ -114,6 +114,10 @@ eval "$(zoxide init zsh)"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 source $HOME/.aliases
 
+# Open zellij on startup
+eval "$(zellij setup --generate-auto-start zsh)"
+
+
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"

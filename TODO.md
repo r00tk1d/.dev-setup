@@ -14,11 +14,20 @@
 
 - cleanup intellij (settings) and export to this repo
 
-- rename to .dev_setup?
+- rename to .dev-setup?
+
+- change stow to simple symlinks?
+
+- clipboard manager:
+    Extension: Clipboard Manager not working:
+    git clone https://github.com/Tudmotu/gnome-shell-extension-clipboard-indicator.git ~/.local/share/gnome-shell/extensions/clipboard-indicator@tudmotu.com
+    gnome-extensions enable clipboard-indicator@tudmotu.com
 
 - decide for more verbose/quiet output
 
 - add README.md in manual_settings folder
+
+- docker image for testing
 
 - switch-window.sh: currently might not focusing the last used window from app A if switching from App B to App A. It focuses the last opened window. This might be non trivial to adjust but would be an improvement
 

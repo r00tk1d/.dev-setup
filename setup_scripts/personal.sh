@@ -21,11 +21,12 @@ chmod +x ssh.sh && source ssh.sh
 chmod +x node-setup.sh && source node-setup.sh
 chmod +x zsh-setup.sh && source zsh-setup.sh
 chmod +x java.sh && source java.sh
+chmod +x rust.sh && source rust.sh
 chmod +x docker.sh && source docker.sh || handle_fail "docker"
 chmod +x productivity-tools.sh && source productivity-tools.sh
+chmod +x zellij.sh && source zellij.sh
 chmod +x software.sh && source software.sh
-chmod +x personal-software.sh && source personal-software.sh
-chmod +x intellij-community.sh && source intellij-community.sh || handle_fail "intellij-community"
+chmod +x intellij-community.sh && source intellij-community.sh
 chmod +x stow-dotfiles.sh && source stow-dotfiles.sh
 chmod +x load-gnome-settings.sh && source load-gnome-settings.sh || handle_fail "load-gnome-settings"
 
