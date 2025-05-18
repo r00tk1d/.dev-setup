@@ -1,16 +1,28 @@
 alias bat="batcat"
 # recursive fuzzy search for file NAME starting in the current directory and open the selected file in vs code
 alias fpv="fzf --preview 'batcat --style=numbers --color=always {}' --preview-window=up:50% --bind 'enter:execute(code {})'"
-alias mdir='f() { mkdir -p $1 && cd "$_" };f'
+# pretty prints json from the clipboard content 
+alias pjson='f() { xclip -selection clipboard -o | jq };f'
+# Pretty-print a string from clipboard with the interpretation of backslash escapes
+alias pprint='f() { echo -e "$(xclip -selection clipboard -o)" };f'
+# Create and cd into a directory with subdirectories
+alias mdir='f() { mkdir -p $1 && cd "$_" };f' 
 alias cht='f() { curl -s cht.sh/$1 | less };f'
 alias timer="timer.sh"
+# Open file in the default application
 alias xo="xdg-open" 
+# Use zoxide instead of cd
 alias cd="z"
 
-# jira zsh plugin
+alias gituncommit="git reset HEAD~1"
+alias gitlog="git log --color --graph --pretty=format:'%Cred%h%Creset-%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+
+# Opens an existing issue matching the current branch name
 alias jb="jira branch"
+# Opens a new Jira issue dialogue
 alias jn="jira new"
 
-# docker
+
 alias dockerstopall='docker stop $(docker ps -a -q)'
 alias dockerreno='docker update --restart=no $(docker ps -a -q)'
+
