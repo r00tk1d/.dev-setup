@@ -34,4 +34,3 @@ All setting files are inside the directory `~/dev_setup/manual_settings/`.
 
 ## Keyboard
 - EurKEY Layout for german special chars äöüß (https://eurkey.steffen.bruentjen.eu/?lang=de)
-- (on top the Kenkyo layout (https://github.com/argenkiwi/kenkyo) with keyd)
