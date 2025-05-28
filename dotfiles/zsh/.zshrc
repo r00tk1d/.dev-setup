@@ -115,7 +115,7 @@ eval "$(zoxide init zsh)"
 source $HOME/.aliases
 
 # Open zellij on startup
-eval "$(zellij setup --generate-auto-start zsh)"
+# eval "$(zellij setup --generate-auto-start zsh)"
 
 
 
