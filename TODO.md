@@ -18,6 +18,8 @@
 
 - change stow to simple symlinks?
 
+- ranger or similar
+
 - clipboard manager:
     Extension: Clipboard Manager not working:
     git clone https://github.com/Tudmotu/gnome-shell-extension-clipboard-indicator.git ~/.local/share/gnome-shell/extensions/clipboard-indicator@tudmotu.com
