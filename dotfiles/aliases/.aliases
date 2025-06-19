@@ -7,8 +7,7 @@ alias pjson='f() { xclip -selection clipboard -o | jq };f'
 alias pprint='f() { echo -e "$(xclip -selection clipboard -o)" };f'
 # Create and cd into a directory with subdirectories
 alias mdir='f() { mkdir -p $1 && cd "$_" };f' 
-alias cht='f() { curl -s cht.sh/$1 | less };f'
-alias timer="timer.sh"
+
 # Open file in the default application
 alias xo="xdg-open" 
 # Use zoxide instead of cd
@@ -20,5 +19,12 @@ alias jb="jira branch"
 alias jn="jira new"
 
 
+
 alias dockerstopall='docker stop $(docker ps -a -q)'
 alias dockerreno='docker update --restart=no $(docker ps -a -q)'
+
+
+# Run Scripts/Programs
+alias canvas="canvas.sh"
+alias timer="timer.sh"
+alias uptimes="uptimes.sh"
