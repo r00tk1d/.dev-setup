@@ -1,2 +1,3 @@
 #!/bin/bash
-xdg-open canvas.html
+pwd
+xdg-open ~/.local/bin/canvas.html
