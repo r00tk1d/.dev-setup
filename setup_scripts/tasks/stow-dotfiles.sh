@@ -2,7 +2,7 @@
 
 sudo apt-get -q install -y stow || handle_fail "stow" 
 
-cd "$HOME/dev_setup/dotfiles"
+cd "$HOME/.dev-setup/dotfiles"
 
 # hack for overwrite existing dotfiles
 if [ -n "$(git status --porcelain)" ]; then
@@ -14,4 +14,4 @@ else
 fi
 
 
-cd "$HOME/dev_setup/setup_scripts/tasks"
+cd "$HOME/.dev-setup/setup_scripts/tasks"

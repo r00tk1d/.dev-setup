@@ -13,7 +13,7 @@ handle_fail() {
 
 source personal_values.sh || exit 1
 
-cd ~/dev_setup/setup_scripts/tasks
+cd ~/.dev-setup/setup_scripts/tasks
 
 chmod +x core-setup.sh && source core-setup.sh
 chmod +x git-personal-setup.sh && source git-personal-setup.sh

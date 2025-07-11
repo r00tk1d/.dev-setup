@@ -1,6 +1,4 @@
 
-- migrate new_ticket.sh, worktime.sh 
-
 - brave browser plugins and user settings dotfile
     https://www.chromium.org/administrators/pre-installed-extensions/
     - Bookmarks dotfile .config/BraveSoftware/Brave-Browser/Default/Bookmarks cleanup
@@ -13,8 +11,6 @@
 - (credential handling)
 
 - cleanup intellij (settings) and export to this repo
-
-- rename to .dev-setup?
 
 - change stow to simple symlinks?
 

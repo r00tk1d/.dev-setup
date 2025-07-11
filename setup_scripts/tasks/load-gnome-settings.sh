@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd ~/dev_setup/dotfiles
+cd ~/.dev-setup/dotfiles
 
 dconf dump / > gnome-settings-backup.bak
 
