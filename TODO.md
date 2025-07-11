@@ -14,7 +14,9 @@
 
 - change stow to simple symlinks?
 
-- ranger or similar
+- ranger or similar?
+
+- teardown script
 
 - clipboard manager:
     Extension: Clipboard Manager not working:

@@ -7,7 +7,7 @@
     1. Import Bookmarks
     2. Install Extensions:
         - Install [Vimium](https://chromewebstore.google.com/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb)
-        - Install [powertabs](https://github.com/r00tk1d/show-tab-numbers-extension)
+        - Install [powertabs](https://github.com/r00tk1d/power-tabs)
         - Install [jira-branch-name-generator-extension](https://github.com/r00tk1d/jira-branch-name-generator-extension)
     4. Import Vimium Settings
 5. Import Intellij Settings 

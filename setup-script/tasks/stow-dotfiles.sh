@@ -14,4 +14,4 @@ else
 fi
 
 
-cd "$HOME/.dev-setup/setup_scripts/tasks"
+cd "$HOME/.dev-setup/setup-script/tasks"
