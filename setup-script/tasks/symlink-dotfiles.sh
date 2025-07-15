@@ -1,0 +1,15 @@
+#!/bin/bash
+
+ln -sf "$HOME/.dev-setup/dotfiles/aliases/.aliases" "$HOME/.aliases" 
+ln -sf "$HOME/.dev-setup/dotfiles/bash/.bashrc" "$HOME/.bashrc"
+ln -sf "$HOME/.dev-setup/dotfiles/config/.config/autostart/gedit.desktop" "$HOME/.config/autostart/gedit.desktop"
+ln -sf "$HOME/.dev-setup/dotfiles/config/.config/zellij/config.kdl" "$HOME/.config/zellij/config.kdl"
+ln -sf "$HOME/.dev-setup/dotfiles/git/.git-commit-message-template.txt" "$HOME/.git-commit-message-template.txt"
+ln -sf "$HOME/.dev-setup/dotfiles/scripts/.local/bin/canvas.html" "$HOME/.local/bin/canvas.html"
+ln -sf "$HOME/.dev-setup/dotfiles/scripts/.local/bin/canvas.sh" "$HOME/.local/bin/canvas.sh"
+ln -sf "$HOME/.dev-setup/dotfiles/scripts/.local/bin/dev-morning.sh" "$HOME/.local/bin/dev-morning.sh"
+ln -sf "$HOME/.dev-setup/dotfiles/scripts/.local/bin/git-bisect-find-bug.sh" "$HOME/.local/bin/git-bisect-find-bug.sh"
+ln -sf "$HOME/.dev-setup/dotfiles/scripts/.local/bin/switch-window.sh" "$HOME/.local/bin/switch-window.sh"
+ln -sf "$HOME/.dev-setup/dotfiles/scripts/.local/bin/timer.sh" "$HOME/.local/bin/timer.sh"
+ln -sf "$HOME/.dev-setup/dotfiles/scripts/.local/bin/uptimes.sh" "$HOME/.local/bin/uptimes.sh"
+ln -sf "$HOME/.dev-setup/dotfiles/zsh/.zshrc" "$HOME/.zshrc"

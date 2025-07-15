@@ -12,8 +12,6 @@
 
 - cleanup intellij (settings) and export to this repo
 
-- change stow to simple symlinks?
-
 - ranger or similar?
 
 - teardown script

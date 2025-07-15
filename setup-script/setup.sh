@@ -27,7 +27,7 @@ chmod +x productivity-tools.sh && source productivity-tools.sh
 chmod +x zellij.sh && source zellij.sh
 chmod +x software.sh && source software.sh
 chmod +x intellij.sh && source intellij.sh
-chmod +x stow-dotfiles.sh && source stow-dotfiles.sh
+chmod +x symlink-dotfiles.sh && source symlink-dotfiles.sh || handle_fail "symlink-dotfiles"
 chmod +x load-gnome-settings.sh && source load-gnome-settings.sh || handle_fail "load-gnome-settings"
 
 
