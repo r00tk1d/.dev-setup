@@ -9,18 +9,9 @@ sudo apt-get update -y && sudo apt-get install -y curl git software-properties-c
 
 ## 2. Run Setup Script:
 (The last run is logged in `~/.dev-setup/setup-script/log.out`.)
-### Run the setup:
-1. Set values in the `~/.dev-setup/setup-script/personal_values.sh` file
-2. Run:
+Run:
 ```bash
 cd ~/.dev-setup/setup-script && chmod +x setup.sh && ./setup.sh
-```
-
-### Run my work setup:
-1. Set values in the `~/.dev-setup/setup-script/work_values.sh` file
-2. Run:
-```bash
-cd ~/.dev-setup/setup-script && chmod +x work.sh && ./work.sh
 ```
 
 ## 3. Apply Manual Settings

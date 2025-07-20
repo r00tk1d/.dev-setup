@@ -27,6 +27,8 @@
 
 - docker image for testing
 
+- vimium c instead of vimium?
+
 - switch-window.sh: currently might not focusing the last used window from app A if switching from App B to App A. It focuses the last opened window. This might be non trivial to adjust but would be an improvement
 
 Things to test:
