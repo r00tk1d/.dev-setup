@@ -10,4 +10,4 @@ sudo apt-get -q install -y bat || handle_fail "bat" # Cat clone with syntax high
 sudo apt-get -q install -y z || handle_fail "zoxide" # Smarter cd command (quick directory jumping)
 sudo apt-get -q install -y wmctrl || handle_fail "wmctrl" # Command-line tool to interact with X window manager
 sudo apt-get -q install -y xdotool || handle_fail "xdotool" # Simulate keyboard/mouse input and window management
-sudo snap install cheat || handle_fail "cheat" # Command-line cheat sheet manager
+cargo install --locked navi || handle_fail "navi"  # Command-line cheat sheet manager

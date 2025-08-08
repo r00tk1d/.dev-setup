@@ -19,12 +19,6 @@ alias jb="jira branch"
 alias jn="jira new"
 
 
-
-alias dockerstopall='docker stop $(docker ps -a -q)'
-alias dockerreno='docker update --restart=no $(docker ps -a -q)'
-
-
 # Run Scripts/Programs
-alias canvas="canvas.sh"
 alias timer="timer.sh"
 alias uptimes="uptimes.sh"

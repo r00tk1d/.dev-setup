@@ -1,0 +1,13 @@
+% ripgrep
+
+# Search with context
+rg -n -C {{number_of_lines}} {{pattern}}
+
+# Search with lines before the match
+rg -B {{num_lines}} {{pattern}}
+
+# Search with lines after the match
+rg -A {{num_lines}} {{pattern}}
+
+# Count matching lines
+rg -n -c {{pattern}}

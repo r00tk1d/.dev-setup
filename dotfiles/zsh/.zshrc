@@ -116,6 +116,8 @@ source $HOME/.aliases
 
 # Open zellij on startup
 # eval "$(zellij setup --generate-auto-start zsh)"
+# Ctrl + G for opening navi
+eval "$(navi widget zsh)"
 
 
 

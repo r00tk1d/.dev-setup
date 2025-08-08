@@ -1,0 +1,10 @@
+% docker
+
+# Stop all running containers
+docker stop $(docker ps -a -q)
+
+# Show all running containers
+docker ps
+
+# Show all containers (including stopped)
+docker ps -a

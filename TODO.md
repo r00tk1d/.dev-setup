@@ -50,5 +50,7 @@ https://github.com/ibraheemdev/modern-unix
 - lazygit
 - k9s
 - ripgrep-all !!!
+- https://github.com/tldr-pages/tldr?tab=readme-ov-file#similar-projects navi or cheat for saving commands for cli
+- shortcut management
 
 idea: launch everything from commandline and use something like dmenu to quickly use aliases for launching/switching etc.

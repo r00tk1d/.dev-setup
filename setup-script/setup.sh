@@ -28,7 +28,7 @@ chmod +x zellij.sh && source zellij.sh
 chmod +x software.sh && source software.sh
 chmod +x intellij.sh && source intellij.sh
 chmod +x symlink-dotfiles.sh && source symlink-dotfiles.sh || handle_fail "symlink-dotfiles"
-chmod +x load-gnome-settings.sh && source load-gnome-settings.sh || handle_fail "load-gnome-settings"
+chmod +x gnome.sh && source gnome.sh || handle_fail "gnome"
 
 
 
