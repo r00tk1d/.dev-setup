@@ -11,3 +11,7 @@
         - Install [jira-branch-name-generator-extension](https://github.com/r00tk1d/jira-branch-name-generator-extension)
     4. Import Vimium Settings
 5. Import Intellij Settings 
+6. Set X11 as the default display server (necessary for window switch shortcuts):
+    1. `sudo nano /etc/gdm/custom.conf`
+    2. Set: `WaylandEnable=false`
+    3. `sudo reboot`
