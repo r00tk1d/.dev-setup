@@ -15,3 +15,6 @@ sdk list java | grep installed
 
 # Set default Java version (optional)
 # sdk default java <version>
+
+# Install Maven
+sudo apt install maven -y
