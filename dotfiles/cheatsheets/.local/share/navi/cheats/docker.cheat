@@ -3,8 +3,14 @@
 # Stop all running containers
 docker stop $(docker ps -a -q)
 
+# Stop a container
+docker stop <container_id>
+
 # Show all running containers
 docker ps
 
 # Show all containers (including stopped)
 docker ps -a
+
+$ image_id: docker images --- --headers 1 --column 3
+$ container_id: docker ps --- --headers 1 --column 1

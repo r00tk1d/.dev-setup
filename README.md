@@ -19,12 +19,18 @@ All setting files are inside the directory `~/.dev-setup/manual_settings/`.
 
 # Why?
 
+## Philosophy
+- minimal amount of needed tools for maximum joy
+- master less tools is better than using more tools but dont understand them fully
+- navigation to a point i want to be quickly should when ever possible happen with keyboard shortcuts. If thats not possible through fuzzy finding.
+
 ## setup tools
-- bash script
+- bash scripts
+- disadvantage: idempotency
 
 
 ## Keyboard
-- EurKEY Layout for german special chars äöüß (https://eurkey.steffen.bruentjen.eu/?lang=de)
+- I find US QWERTY keyboard using the ANSI physical layout are the best for programming and efficient typing imo. However additionally I need to write german special characters every now and when. The EurKEY Layout fits these needs perfectly: (https://eurkey.steffen.bruentjen.eu/?lang=de)
 
 ## Git
 - 
@@ -34,3 +40,14 @@ All setting files are inside the directory `~/.dev-setup/manual_settings/`.
 ## Gnome
 
 ## Ubuntu Navigation
+
+## Managing dotfiles (why no dotfile manager like stow)
+- The dotfiles in this repo are the single source truth and should always overwrite local files. With stow its not easily possible to achieve this behavior. Furthermore it hides what actually happens. With symlinks its one less dependency and straight forward to understand. A little bit more manual work if I want to add a new dotfile, but this also keeps me in the loop how many dotfiles i actually have and reminds me of reducing them to get a minimal setup.
+
+## Zsh
+
+## Shortcuts
+
+## Aliases
+
+## Cheatsheets

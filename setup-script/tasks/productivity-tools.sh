@@ -11,3 +11,4 @@ sudo apt-get -q install -y z || handle_fail "zoxide" # Smarter cd command (quick
 sudo apt-get -q install -y wmctrl || handle_fail "wmctrl" # Command-line tool to interact with X window manager
 sudo apt-get -q install -y xdotool || handle_fail "xdotool" # Simulate keyboard/mouse input and window management
 bash <(curl -sL https://raw.githubusercontent.com/denisidoro/navi/master/scripts/install) || handle_fail "navi"  # Command-line cheat sheet manager
+sudo apt-get -q install -y postgresql-client || handle_fail "postgresql-client" # Client for postgres DBs

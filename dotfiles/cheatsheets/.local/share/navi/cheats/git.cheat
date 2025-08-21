@@ -1,0 +1,30 @@
+% git
+
+# Change branch
+git checkout <branch>
+
+# Stage files
+cd <toplevel_directory> && git add <changed_files>
+
+# Commit staged files
+git commit -m "<commit_header>" -m "<commit_body>" -m "[Ticket: $(git rev-parse --abbrev-ref HEAD | cut -d'/' -f2 | cut -d'-' -f1,2)]"
+
+# Git Full: Stage files, commit, push
+cd <toplevel_directory> && git add <changed_files> && git commit -m "<commit_header>" -m "<commit_body>" -m "[Ticket: $(git rev-parse --abbrev-ref HEAD | cut -d'/' -f2 | cut -d'-' -f1,2)]" && git push
+
+# Undo commits from local repository (keep changes)
+git reset --soft HEAD~<number_of_commits>
+
+# Revert a commit by a new commit
+git revert <commit>
+
+# Delete branch on remote
+git push origin --delete <branch>
+
+# Delete branch on local
+git branch -D <branch>
+
+$ branch: git branch | awk '{print $NF}'
+$ commit: git log --oneline --- --map "awk '{print $1}'"
+$ toplevel_directory: git rev-parse --show-toplevel
+$ changed_files: git status --untracked-files=all -s --porcelain | awk '{print $NF}' --- --preview 'git diff --color=always {}' --multi --expand 

@@ -1,0 +1,10 @@
+% maven
+
+# Show dependency tree
+mvn dependency:tree
+
+# Run Spring Boot App with a specific profile
+mvn spring-boot:run -Dspring-boot.run.profiles=<profile>
+
+# List Maven profiles in the project
+mvn help:all-profiles

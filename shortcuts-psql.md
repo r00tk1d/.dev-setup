@@ -1,10 +1,3 @@
-TODO into .cheat
-
-Connect to a database:
-```
-psql -U <username> -d <database> -h <host> -p <port>
-```
-
 Open a Transaction:
 ```SQL
 BEGIN;

@@ -1,0 +1,6 @@
+% rainfrog
+
+# Connect to a database with url
+rainfrog -u postgres://<username>:<password>@<host>:<port>/<db_name> --driver <driver>
+
+$ driver: echo -e "postgres\nmysql\nsqlite"

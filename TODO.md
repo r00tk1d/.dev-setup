@@ -1,4 +1,8 @@
 
+- use .env file instead of user-input.sh
+- use personal and work git accounts 
+- rearrange install scripts
+
 - brave browser plugins and user settings dotfile
     https://www.chromium.org/administrators/pre-installed-extensions/
     - Bookmarks dotfile .config/BraveSoftware/Brave-Browser/Default/Bookmarks cleanup

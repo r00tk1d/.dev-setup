@@ -1,5 +1,4 @@
 #!/bin/bash
-
 ln -sf "$HOME/.dev-setup/dotfiles/aliases/.aliases" "$HOME/.aliases" 
 ln -sf "$HOME/.dev-setup/dotfiles/bash/.bashrc" "$HOME/.bashrc"
 ln -sf "$HOME/.dev-setup/dotfiles/config/.config/autostart/gedit.desktop" "$HOME/.config/autostart/gedit.desktop"
@@ -15,3 +14,8 @@ ln -sf "$HOME/.dev-setup/dotfiles/scripts/.local/bin/uptimes.sh" "$HOME/.local/b
 ln -sf "$HOME/.dev-setup/dotfiles/zsh/.zshrc" "$HOME/.zshrc"
 ln -sf "$HOME/.dev-setup/dotfiles/cheatsheets/.local/share/navi/cheats/docker.cheat" "$HOME/.local/share/navi/cheats/docker.cheat"
 ln -sf "$HOME/.dev-setup/dotfiles/cheatsheets/.local/share/navi/cheats/ripgrep.cheat" "$HOME/.local/share/navi/cheats/ripgrep.cheat"
+ln -sf "$HOME/.dev-setup/dotfiles/cheatsheets/.local/share/navi/cheats/git.cheat" "$HOME/.local/share/navi/cheats/git.cheat"
+ln -sf "$HOME/.dev-setup/dotfiles/cheatsheets/.local/share/navi/cheats/psql.cheat" "$HOME/.local/share/navi/cheats/psql.cheat"
+ln -sf "$HOME/.dev-setup/dotfiles/cheatsheets/.local/share/navi/cheats/kubectl.cheat" "$HOME/.local/share/navi/cheats/kubectl.cheat"
+ln -sf "$HOME/.dev-setup/dotfiles/cheatsheets/.local/share/navi/cheats/maven.cheat" "$HOME/.local/share/navi/cheats/maven.cheat"
+ln -sf "$HOME/.dev-setup/dotfiles/cheatsheets/.local/share/navi/cheats/rainfrog.cheat" "$HOME/.local/share/navi/cheats/rainfrog.cheat"

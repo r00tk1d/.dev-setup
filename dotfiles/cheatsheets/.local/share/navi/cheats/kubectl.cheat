@@ -1,0 +1,28 @@
+% kubectl
+
+# List pods
+kubectl get pods
+
+# List services
+kubectl get svc
+
+# List all resources in all namespaces
+kubectl get all -A
+
+# Get pod infos
+kubectl get pod <pod_name> -o yaml
+
+# Connect to a pod
+kubectl exec -it <pod_name> -- bash
+
+# Portforward to a pod
+kubectl port-forward pod/<pod_name> <local_port>:<pod_port>
+
+# Show all active port forwards:
+kubectl get svc -o json | jq '.items[] | {name:.metadata.name, p:.spec.ports[] } | select( .p.nodePort != null ) | "\(.name): localhost:\(.p.nodePort) -> \(.p.port) -> \(.p.targetPort)"'
+
+# Delete all Pods with Status Failed/Error
+kubectl delete $(kubectl get pods --field-selector=status.phase=Failed -o name)
+
+
+$ pod_name: kubectl get pods | awk '{print $1}'
