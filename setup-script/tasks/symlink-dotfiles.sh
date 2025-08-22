@@ -1,4 +1,6 @@
 #!/bin/bash
+
+# CAREFUL! This overwrites existing files!
 ln -sf "$HOME/.dev-setup/dotfiles/aliases/.aliases" "$HOME/.aliases" 
 ln -sf "$HOME/.dev-setup/dotfiles/bash/.bashrc" "$HOME/.bashrc"
 ln -sf "$HOME/.dev-setup/dotfiles/config/.config/autostart/gedit.desktop" "$HOME/.config/autostart/gedit.desktop"
@@ -19,3 +21,4 @@ ln -sf "$HOME/.dev-setup/dotfiles/cheatsheets/.local/share/navi/cheats/psql.chea
 ln -sf "$HOME/.dev-setup/dotfiles/cheatsheets/.local/share/navi/cheats/kubectl.cheat" "$HOME/.local/share/navi/cheats/kubectl.cheat"
 ln -sf "$HOME/.dev-setup/dotfiles/cheatsheets/.local/share/navi/cheats/maven.cheat" "$HOME/.local/share/navi/cheats/maven.cheat"
 ln -sf "$HOME/.dev-setup/dotfiles/cheatsheets/.local/share/navi/cheats/rainfrog.cheat" "$HOME/.local/share/navi/cheats/rainfrog.cheat"
+ln -sf "$HOME/.dev-setup/dotfiles/git/.githooks/prepare-commit-msg" "$HOME/.githooks/prepare-commit-msg"

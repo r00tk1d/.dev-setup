@@ -1,0 +1,33 @@
+#!/bin/bash
+
+prefix="BSE-"
+
+commitMsgFile=$1
+message=$(<"$commitMsgFile")
+
+# Get the current branch name
+branchName=$(git rev-parse --abbrev-ref HEAD)
+
+# Check if the branch name contains the ticket prefix
+if [[ "$branchName" == *"$prefix"* ]]; then
+  ticketID=$(echo "$branchName" | grep -o "$prefix[0-9]\+")
+
+  if [[ $message =~ $ticketID ]]; then
+  echo "The commit message already contains the ticket ID."
+  exit 0
+  fi
+  
+  if [[ -z $ticketID ]]; then
+      echo "Could not extract the ticket ID."
+      exit 1
+  fi
+
+  # Prepend ticket ID to commit message
+  output="$ticketID: $message"
+  echo "$output" > "$commitMsgFile"
+  echo "Updated commit message: $output"
+
+else
+  echo "The current branch name does not contain the ticket ID '$prefix'. Skipping..."
+  exit 0
+fi
