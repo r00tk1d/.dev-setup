@@ -9,11 +9,14 @@ cd <toplevel_directory> && git add <changed_files>
 # Commit staged files
 git commit -m "<commit_header>" -m "<commit_body>" -m "[Ticket: $(git rev-parse --abbrev-ref HEAD | cut -d'/' -f2 | cut -d'-' -f1,2)]"
 
-# Git Full: Stage files, commit, push
-cd <toplevel_directory> && git add <changed_files> && git commit -m "<commit_header>" -m "<commit_body>" -m "[Ticket: $(git rev-parse --abbrev-ref HEAD | cut -d'/' -f2 | cut -d'-' -f1,2)]" && git push
+# Git acp: add, commit, push
+cd <toplevel_directory> && git add <changed_files> && git commit -m "<commit_header>" -m "<commit_body>" && git push
 
 # Undo commits from local repository (keep changes)
 git reset --soft HEAD~<number_of_commits>
+
+# Reset local branch to remote branch
+git fetch origin && git reset --hard origin/<branch>
 
 # Revert a commit by a new commit
 git revert <commit>
