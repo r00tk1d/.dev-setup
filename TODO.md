@@ -51,7 +51,6 @@ https://github.com/ibraheemdev/modern-unix
 - powerlevel10k
 - zsh-completions
 - lazydocker
-- lazygit
 - k9s
 - ripgrep-all !!!
 - https://github.com/tldr-pages/tldr?tab=readme-ov-file#similar-projects navi or cheat for saving commands for cli

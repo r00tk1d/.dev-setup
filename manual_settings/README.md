@@ -20,3 +20,4 @@
     2. search for vitals and install
     3. sometimes reboot is necessary to get all vitals
     4. adjust vitals in topbar as needed
+8. change ticket prefix in dotfiles/git/.githooks/prepare-commit-msg

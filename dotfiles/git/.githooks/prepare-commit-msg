@@ -28,6 +28,6 @@ if [[ "$branchName" == *"$prefix"* ]]; then
   echo "Updated commit message: $output"
 
 else
-  echo "The current branch name does not contain the ticket ID '$prefix'. Skipping..."
+  echo "The current branch name does not contain the ticket ID '$prefix'. Skip prepending ticket id..."
   exit 0
 fi
