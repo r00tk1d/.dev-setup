@@ -1,0 +1,14 @@
+[user]
+    name = Michael Hirsch
+    email = r00tk1d@users.noreply.github.com
+[core]
+	autocrlf = input
+	hooksPath = ~/.githooks
+[alias]
+	uncommit = reset HEAD~1
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset-%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+[pull]
+	rebase = true
+
+[includeIf "gitdir:~/work/"]
+    path = ~/.gitconfig-work

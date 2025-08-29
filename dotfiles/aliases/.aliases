@@ -1,4 +1,6 @@
 alias bat="batcat"
+alias lg="lazygit"
+alias c="code ."
 # recursive fuzzy search for file NAME starting in the current directory and open the selected file in vs code
 alias fpv="fzf --preview 'batcat --style=numbers --color=always {}' --preview-window=up:50% --bind 'enter:execute(code {})'"
 # pretty prints json from the clipboard content 

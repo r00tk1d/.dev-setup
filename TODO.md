@@ -1,11 +1,9 @@
-
+- docker image for testing
 - use .env file instead of user-input.sh
-- use personal and work git accounts 
 - rearrange install scripts
 
 - brave browser plugins and user settings dotfile
     https://www.chromium.org/administrators/pre-installed-extensions/
-    - Bookmarks dotfile .config/BraveSoftware/Brave-Browser/Default/Bookmarks cleanup
 
 - convert shortcuts.ods in tsv or csv
 
@@ -29,11 +27,13 @@
 
 - add README.md in manual_settings folder
 
-- docker image for testing
+
 
 - vimium c instead of vimium?
 
 - switch-window.sh: currently might not focusing the last used window from app A if switching from App B to App A. It focuses the last opened window. This might be non trivial to adjust but would be an improvement
+
+- use glab mr to create merge requests from command line and create a Teams message for review?
 
 Things to test:
 https://github.com/ibraheemdev/modern-unix
@@ -46,14 +46,14 @@ https://github.com/ibraheemdev/modern-unix
 - remap caps lock: to esc? delete? ctrl?
 - vimium vomnibar custom: https://jdhao.github.io/2023/04/18/vimium_custom_search_engine/ 
 - i3, polybar
-- keepassxc chrome extension
+- keepassxc chrome extension or switch to pass?
 - adjust shortcuts to have the same meaning in different applications. e.g. Alt+left/right, F2, strg z strg y, etc.
 - powerlevel10k
 - zsh-completions
 - lazydocker
 - k9s
-- ripgrep-all !!!
-- https://github.com/tldr-pages/tldr?tab=readme-ov-file#similar-projects navi or cheat for saving commands for cli
+- ripgrep-all
 - shortcut management
+- get riod of ohmyzsh, use zinit?
 
 idea: launch everything from commandline and use something like dmenu to quickly use aliases for launching/switching etc.

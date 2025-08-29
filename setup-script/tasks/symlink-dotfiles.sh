@@ -22,3 +22,4 @@ ln -sf "$HOME/.dev-setup/dotfiles/cheatsheets/.local/share/navi/cheats/kubectl.c
 ln -sf "$HOME/.dev-setup/dotfiles/cheatsheets/.local/share/navi/cheats/maven.cheat" "$HOME/.local/share/navi/cheats/maven.cheat"
 ln -sf "$HOME/.dev-setup/dotfiles/cheatsheets/.local/share/navi/cheats/rainfrog.cheat" "$HOME/.local/share/navi/cheats/rainfrog.cheat"
 ln -sf "$HOME/.dev-setup/dotfiles/git/.githooks/prepare-commit-msg" "$HOME/.githooks/prepare-commit-msg"
+ln -sf "$HOME/.dev-setup/dotfiles/git/.gitconfig" "$HOME/.gitconfig"

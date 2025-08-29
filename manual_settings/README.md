@@ -21,3 +21,4 @@
     3. sometimes reboot is necessary to get all vitals
     4. adjust vitals in topbar as needed
 8. change ticket prefix in dotfiles/git/.githooks/prepare-commit-msg
+9. for work: create a `.gitconfig-work` file in HOME directory with settings for work
