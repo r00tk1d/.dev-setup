@@ -13,6 +13,7 @@ ln -sf "$HOME/.dev-setup/dotfiles/scripts/.local/bin/git-bisect-find-bug.sh" "$H
 ln -sf "$HOME/.dev-setup/dotfiles/scripts/.local/bin/switch-window.sh" "$HOME/.local/bin/switch-window.sh"
 ln -sf "$HOME/.dev-setup/dotfiles/scripts/.local/bin/timer.sh" "$HOME/.local/bin/timer.sh"
 ln -sf "$HOME/.dev-setup/dotfiles/scripts/.local/bin/uptimes.sh" "$HOME/.local/bin/uptimes.sh"
+ln -sf "$HOME/.dev-setup/dotfiles/scripts/.local/bin/code-review.sh" "$HOME/.local/bin/code-review.sh"
 ln -sf "$HOME/.dev-setup/dotfiles/zsh/.zshrc" "$HOME/.zshrc"
 ln -sf "$HOME/.dev-setup/dotfiles/cheatsheets/.local/share/navi/cheats/docker.cheat" "$HOME/.local/share/navi/cheats/docker.cheat"
 ln -sf "$HOME/.dev-setup/dotfiles/cheatsheets/.local/share/navi/cheats/ripgrep.cheat" "$HOME/.local/share/navi/cheats/ripgrep.cheat"
