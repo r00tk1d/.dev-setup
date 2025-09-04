@@ -48,3 +48,5 @@ echo "Soft resetting branch to parent of first commit ($FIRST_COMMIT)"
 git reset --soft "${FIRST_COMMIT}^"
 
 echo "✅ Done. Branch $BRANCH is now soft reset to its start (base: $BASE_BRANCH)."
+
+echo "After review and changes run: git reset --mixed ORIG_HEAD"
