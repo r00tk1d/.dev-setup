@@ -1,6 +1,5 @@
 [user]
     name = Michael Hirsch
-    email = r00tk1d@users.noreply.github.com
 [core]
 	autocrlf = input
 	hooksPath = $HOME/.githooks
@@ -10,5 +9,14 @@
 [pull]
 	rebase = true
 
-[includeIf "gitdir:~/work/"]
+# Default to personal
+[include]
+    path = ~/.gitconfig-personal
+
+# If work config exists, override personal everywhere
+[include]
     path = ~/.gitconfig-work
+
+# But always use personal in ~/personal/*
+[includeIf "gitdir:~/personal/"]
+    path = ~/.gitconfig-personal

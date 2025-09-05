@@ -13,7 +13,7 @@ if [[ "$branchName" == *"$prefix"* ]]; then
   ticketID=$(echo "$branchName" | grep -o "$prefix[0-9]\+")
 
   if [[ $message =~ $ticketID ]]; then
-  echo "The commit message already contains the ticket ID."
+  echo "The commit message already contains a ticket ID."
   exit 0
   fi
   
