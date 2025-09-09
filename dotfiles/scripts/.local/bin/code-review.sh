@@ -19,7 +19,7 @@ fi
 echo "👉 Selected base branch: $BASE_BRANCH"
 
 
-BRANCH=$(git for-each-ref refs/heads --format='%(refname:short)' | grep -vx "^$BASE_BRANCH\$" | fzf --height 10 --prompt="cr branch> " --ansi)
+BRANCH=$(git for-each-ref refs/heads refs/remotes --format='%(refname:short)' | grep -vx "^$BASE_BRANCH\$" | fzf --height 10 --prompt="cr branch> " --ansi)
 if [ -z "$BRANCH" ]; then
   echo "❌ No CR branch selected."
   exit 1
