@@ -6,6 +6,9 @@ set -e
 DEFAULT_BASE="develop"
 BASE_BRANCH="$DEFAULT_BASE"
 
+git fetch --all --prune
+
+# Determine BASE BRANCH (MR into BASE BRANCH)
 read -p "Use '$DEFAULT_BASE' as the base branch? [Y/n] " CONFIRM
 CONFIRM=${CONFIRM:-y}
 
@@ -18,17 +21,38 @@ if [[ ! "$CONFIRM" =~ ^[Yy]$ ]]; then
 fi
 echo "👉 Selected base branch: $BASE_BRANCH"
 
+#Determine BRANCH for code review
+BRANCH=$(git for-each-ref refs/heads refs/remotes --format='%(refname:short)' \
+  | grep -vx "^$BASE_BRANCH\$" \
+  | fzf --height 10 --prompt="cr branch> " --ansi)
 
-BRANCH=$(git for-each-ref refs/heads refs/remotes --format='%(refname:short)' | grep -vx "^$BASE_BRANCH\$" | fzf --height 10 --prompt="cr branch> " --ansi)
 if [ -z "$BRANCH" ]; then
   echo "❌ No CR branch selected."
   exit 1
 fi
+
 echo "👉 Selected cr branch: $BRANCH"
 
-git checkout "$BRANCH"
 
-echo "Finding fork point between $BASE_BRANCH and $BRANCH"
+# Determine if the selected BRANCH is a remote branch
+if [[ "$BRANCH" == origin/* ]]; then
+  LOCAL_BRANCH="${BRANCH#origin/}"
+  
+  if git show-ref --verify --quiet "refs/heads/$LOCAL_BRANCH"; then
+    echo "📦 Local branch '$LOCAL_BRANCH' already exists. Switching to it."
+    git checkout "$LOCAL_BRANCH"
+  else
+    echo "📦 Creating local tracking branch '$LOCAL_BRANCH' from '$BRANCH'"
+    git checkout -b "$LOCAL_BRANCH" "$BRANCH"
+  fi
+
+  BRANCH="$LOCAL_BRANCH"
+else
+  git checkout "$BRANCH"
+fi
+
+
+echo "Finding fork point between '$BASE_BRANCH' and '$BRANCH'"
 FORK_POINT=$(git merge-base --fork-point "$BASE_BRANCH" "$BRANCH" 2>/dev/null || git merge-base "$BASE_BRANCH" "$BRANCH")
 
 if [ -z "$FORK_POINT" ]; then
@@ -49,4 +73,4 @@ git reset --soft "${FIRST_COMMIT}^"
 
 echo "✅ Done. Branch $BRANCH is now soft reset to its start (base: $BASE_BRANCH)."
 
-echo "After review and changes, run: git reset --mixed ORIG_HEAD"
+printf "\nAfter review and changes, run:\n\ngit reset --mixed ORIG_HEAD\n\n"
