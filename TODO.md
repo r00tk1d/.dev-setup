@@ -2,6 +2,8 @@
 - use .env file instead of user-input.sh
 - rearrange install scripts
 
+- stabilize window switcher
+
 - brave browser plugins and user settings dotfile
     https://www.chromium.org/administrators/pre-installed-extensions/
 
