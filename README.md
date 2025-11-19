@@ -20,6 +20,11 @@ All setting files are inside the directory `~/.dev-setup/manual_settings/`.
 # Why?
 
 ## Philosophy
+- developer experience over looks (pls no animations!)
+  -> fast, minimal, uncluttered
+- use defaults as much as possible
+    -> every line of configuration means more that can break and needs to be maintained
+- navigation through shortcuts and fuzzy finding, not searching with eyes
 - minimal amount of needed tools for maximum joy
 - master less tools is better than using more tools but dont understand them fully
 - navigation to a point i want to be quickly should when ever possible happen with keyboard shortcuts. If thats not possible through fuzzy finding.

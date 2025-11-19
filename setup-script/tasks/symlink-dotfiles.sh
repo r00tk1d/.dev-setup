@@ -5,7 +5,7 @@ ln -sf "$HOME/.dev-setup/dotfiles/aliases/.aliases" "$HOME/.aliases"
 ln -sf "$HOME/.dev-setup/dotfiles/bash/.bashrc" "$HOME/.bashrc"
 ln -sf "$HOME/.dev-setup/dotfiles/config/.config/autostart/gedit.desktop" "$HOME/.config/autostart/gedit.desktop"
 ln -sf "$HOME/.dev-setup/dotfiles/config/.config/zellij/config.kdl" "$HOME/.config/zellij/config.kdl"
-mkdir ~/.config/zellij/layouts
+mkdir -p ~/.config/zellij/layouts
 ln -sf "$HOME/.dev-setup/dotfiles/config/.config/zellij/layouts/default.kdl" "$HOME/.config/zellij/layouts/default.kdl"
 ln -sf "$HOME/.dev-setup/dotfiles/git/.git-commit-message-template.txt" "$HOME/.git-commit-message-template.txt"
 ln -sf "$HOME/.dev-setup/dotfiles/scripts/.local/bin/canvas.html" "$HOME/.local/bin/canvas.html"
@@ -24,7 +24,7 @@ ln -sf "$HOME/.dev-setup/dotfiles/cheatsheets/.local/share/navi/cheats/psql.chea
 ln -sf "$HOME/.dev-setup/dotfiles/cheatsheets/.local/share/navi/cheats/kubectl.cheat" "$HOME/.local/share/navi/cheats/kubectl.cheat"
 ln -sf "$HOME/.dev-setup/dotfiles/cheatsheets/.local/share/navi/cheats/maven.cheat" "$HOME/.local/share/navi/cheats/maven.cheat"
 ln -sf "$HOME/.dev-setup/dotfiles/cheatsheets/.local/share/navi/cheats/rainfrog.cheat" "$HOME/.local/share/navi/cheats/rainfrog.cheat"
-mkdir ~/.githooks
+mkdir -p ~/.githooks
 ln -sf "$HOME/.dev-setup/dotfiles/git/.githooks/prepare-commit-msg" "$HOME/.githooks/prepare-commit-msg"
 ln -sf "$HOME/.dev-setup/dotfiles/git/.gitconfig" "$HOME/.gitconfig"
 ln -sf "$HOME/.dev-setup/dotfiles/git/.gitconfig-personal" "$HOME/.gitconfig-personal"

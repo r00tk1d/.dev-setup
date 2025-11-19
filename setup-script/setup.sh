@@ -10,7 +10,9 @@ handle_fail() {
     echo "Installation of $1 failed"
 }
 
-cd ~/.dev-setup/setup-script/tasks
+sudo apt update
+
+cd $HOME/.dev-setup/setup-script/tasks
 
 chmod +x user-input.sh && source user-input.sh || exit 1
 
