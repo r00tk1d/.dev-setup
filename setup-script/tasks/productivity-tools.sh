@@ -12,3 +12,4 @@ sudo apt-get -q install -y wmctrl || handle_fail "wmctrl" # Command-line tool to
 sudo apt-get -q install -y xdotool || handle_fail "xdotool" # Simulate keyboard/mouse input and window management
 bash <(curl -sL https://raw.githubusercontent.com/denisidoro/navi/master/scripts/install) || handle_fail "navi"  # Command-line cheat sheet manager
 sudo apt-get -q install -y postgresql-client || handle_fail "postgresql-client" # Client for postgres DBs
+sudo snap install yazi --classic # terminal file manager TODO snap install puts the dotfiles in another location! Change to other installation method

@@ -21,7 +21,6 @@ chmod +x git.sh && source git.sh
 chmod +x ssh.sh && source ssh.sh
 chmod +x node-setup.sh && source node-setup.sh
 chmod +x zsh-setup.sh && source zsh-setup.sh
-chmod +x jira.sh && source jira.sh
 chmod +x java.sh && source java.sh
 chmod +x rust.sh && source rust.sh
 chmod +x docker.sh && source docker.sh || handle_fail "docker"

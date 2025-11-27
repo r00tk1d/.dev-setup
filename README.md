@@ -17,14 +17,7 @@ cd ~/.dev-setup/setup-script && chmod +x setup.sh && ./setup.sh
 ## 3. Apply Manual Settings
 All setting files are inside the directory `~/.dev-setup/manual_settings/`.
 
-# Why?
-
-## Philosophy
-- developer experience over looks (pls no animations!)
-  -> fast, minimal, uncluttered
-- use defaults as much as possible
-    -> every line of configuration means more that can break and needs to be maintained
-- navigation through shortcuts and fuzzy finding, not searching with eyes
+# Goal
 - minimal amount of needed tools for maximum joy
 - master less tools is better than using more tools but dont understand them fully
 - navigation to a point i want to be quickly should when ever possible happen with keyboard shortcuts. If thats not possible through fuzzy finding.
@@ -33,25 +26,94 @@ All setting files are inside the directory `~/.dev-setup/manual_settings/`.
 - bash scripts
 - disadvantage: idempotency
 
-
+# 
 ## Keyboard
 - I find US QWERTY keyboard using the ANSI physical layout are the best for programming and efficient typing imo. However additionally I need to write german special characters every now and when. The EurKEY Layout fits these needs perfectly: (https://eurkey.steffen.bruentjen.eu/?lang=de)
+
+## Managing dotfiles (why no dotfile manager like stow)
+- The dotfiles in this repo are the single source truth and should always overwrite local files. With stow its not easily possible to achieve this behavior. Furthermore it hides what actually happens. With symlinks its one less dependency and straight forward to understand. A little bit more manual work if I want to add a new dotfile, but this also keeps me in the loop how many dotfiles i actually have and reminds me of reducing them to get a minimal setup.
 
 ## Git
 - 
 
 ## IntelliJ
 
-## Gnome
 
-## Ubuntu Navigation
 
-## Managing dotfiles (why no dotfile manager like stow)
-- The dotfiles in this repo are the single source truth and should always overwrite local files. With stow its not easily possible to achieve this behavior. Furthermore it hides what actually happens. With symlinks its one less dependency and straight forward to understand. A little bit more manual work if I want to add a new dotfile, but this also keeps me in the loop how many dotfiles i actually have and reminds me of reducing them to get a minimal setup.
+# What?
 
-## Zsh
+## OS Settings
+- hide Appbar
+- Appbar left
+
+## Window Management
+- ubuntu:
+    - gnome-tweak-tool
+    - wmctrl
+    - xdotool
+- mac:
+    - skhd (or rcmd?)
+    - rectangle
+    - (rcmd?)
+    - (yabai?)
+    - (hyperkey? CapsLock -> hyperkey)
 
 ## Shortcuts
+
+## Keyboard
+- EurKEY
+- Remap CapsLock to Esc
+
+## Terminal
+- Mac:
+    - iTerm2
+    - Starship
+    - JetBrains Mono Nerd Font
+    - TokyoNight
+
+## Shell ohmyzsh (Zsh Plugins)
+- zsh-autosuggestions
+- zsh-syntax-highlighting
+- fzf-tab
+- git
+- dirhistory 
+- fzf
+- mvn
+
+## Containerization
+- docker
+
+## CLI-Apps
+- lazygit
+- helix
+- fzf
+- xclip (linux only)
+- ripgrep
+- jq
+- bat
+- z
+- navi
+- postgresql-client
+- yazi
+
+## GUI-Apps
+- spotify
+- terminal
+- libreoffice
+- keepassxc
+- vscode
+- brave
+    - vimium
+    - jira branch name generator
+
+## Auto Setups
+- git
+- dotfiles
+- ssh -> create ssh (remove from )
+
+## 
+
+## Manual Setup
 
 ## Aliases
 

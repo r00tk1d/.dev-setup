@@ -17,12 +17,6 @@ alias xo="xdg-open"
 # Use zoxide instead of cd
 alias cd="z"
 
-# Opens an existing issue matching the current branch name
-alias jb="jira branch"
-# Opens a new Jira issue dialogue
-alias jn="jira new"
-
-
 # Run Scripts/Programs
 alias timer="timer.sh"
 alias uptimes="uptimes.sh"

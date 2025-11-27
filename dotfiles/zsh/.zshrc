@@ -11,15 +11,31 @@ export ZSH="$HOME/.oh-my-zsh"
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="avit"
 
-# copy current typed line to clipboard with ^y
-if [[ -n $DISPLAY ]]; then
-    copy_line_to_x_clipboard() {
-        echo -n $BUFFER | xclip -selection clipboard
-        zle reset-prompt
-    }
-    zle -N copy_line_to_x_clipboard
-    bindkey '^Y' copy_line_to_x_clipboard
-fi
+# copy the current typed line to clipboard with ^Y
+copy_line_to_clipboard() {
+    if command -v pbcopy >/dev/null 2>&1; then
+        # macOS
+        echo -n "$BUFFER" | pbcopy
+    elif command -v xclip >/dev/null 2>&1; then
+        # Linux with xclip
+        echo -n "$BUFFER" | xclip -selection clipboard
+    elif command -v xsel >/dev/null 2>&1; then
+        # Linux alternative
+        echo -n "$BUFFER" | xsel --clipboard --input
+    fi
+
+    zle reset-prompt
+}
+zle -N copy_line_to_clipboard
+bindkey '^Y' copy_line_to_clipboard
+
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	IFS= read -r -d '' cwd < "$tmp"
+	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
+	rm -f -- "$tmp"
+}
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -81,7 +97,7 @@ HIST_STAMPS="dd.mm.yyyy"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git dirhistory jira fzf zsh-autosuggestions zsh-syntax-highlighting mvn fzf-tab)
+plugins=(git dirhistory fzf zsh-autosuggestions zsh-syntax-highlighting mvn fzf-tab)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -119,8 +135,12 @@ source $HOME/.aliases
 # Ctrl + G for opening navi
 eval "$(navi widget zsh)"
 
-
+eval "$(starship init zsh)"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
