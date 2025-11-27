@@ -1,8 +1,8 @@
 - docker image for testing
-- use .env file instead of user-input.sh
+- use .env file instead of user-input.sh?
 - rearrange install scripts
 
-- stabilize window switcher
+- make location of repository irrelevant
 
 - https://gist.github.com/mohanpedala/1e2ff5661761d3abd0385e8223e16425?permalink_comment_id=3799230 
 
@@ -18,20 +18,12 @@
 
 - cleanup intellij (settings) and export to this repo
 
-- ranger or similar?
-
-- teardown script
-
 - clipboard manager:
     Extension: Clipboard Manager not working:
     git clone https://github.com/Tudmotu/gnome-shell-extension-clipboard-indicator.git ~/.local/share/gnome-shell/extensions/clipboard-indicator@tudmotu.com
     gnome-extensions enable clipboard-indicator@tudmotu.com
 
 - decide for more verbose/quiet output
-
-- add README.md in manual_settings folder
-
-
 
 - vimium c instead of vimium?
 
@@ -45,7 +37,6 @@ https://github.com/ibraheemdev/modern-unix
 - rofi, dmenu
 - Text expander: Expanso
 - entr 
-- zellij
 - homerow mods (knomad, qmk) https://precondition.github.io/home-row-mods
 - remap caps lock: to esc? delete? ctrl?
 - vimium vomnibar custom: https://jdhao.github.io/2023/04/18/vimium_custom_search_engine/ 

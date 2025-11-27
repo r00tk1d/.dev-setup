@@ -25,10 +25,8 @@ chmod +x java.sh && source java.sh
 chmod +x rust.sh && source rust.sh
 chmod +x docker.sh && source docker.sh || handle_fail "docker"
 chmod +x productivity-tools.sh && source productivity-tools.sh
-chmod +x zellij.sh && source zellij.sh
 chmod +x software.sh && source software.sh
 chmod +x intellij.sh && source intellij.sh
-chmod +x symlink-dotfiles.sh && source symlink-dotfiles.sh || handle_fail "symlink-dotfiles"
 chmod +x gnome.sh && source gnome.sh || handle_fail "gnome"
 
 
