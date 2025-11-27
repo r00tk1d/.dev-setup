@@ -20,13 +20,13 @@ ln -sf "$DOTFILES_DIR/git/.gitconfig" "$HOME/.gitconfig"
 ln -sf "$DOTFILES_DIR/git/.gitconfig-personal" "$HOME/.gitconfig-personal"
 
 # githooks
-mkdir ~/.githooks
+mkdir -p ~/.githooks
 ln -sf "$DOTFILES_DIR/git/.githooks/prepare-commit-msg" "$HOME/.githooks/prepare-commit-msg"
 
 # .config
 ln -sf "$DOTFILES_DIR/config/.config/autostart/gedit.desktop" "$HOME/.config/autostart/gedit.desktop"
 ln -sf "$DOTFILES_DIR/config/.config/zellij/config.kdl" "$HOME/.config/zellij/config.kdl"
-ln -sf "$DOTFILES_DIR/config/.config/helix/config.toml" "$HOME/.config/helix/helix.toml"
+ln -sf "$DOTFILES_DIR/config/.config/helix/config.toml" "$HOME/.config/helix/config.toml"
 ln -sf "$DOTFILES_DIR/config/.config/starship.toml" "$HOME/.config/starship.toml"
 
 # .local
