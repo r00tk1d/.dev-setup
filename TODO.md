@@ -50,5 +50,6 @@ https://github.com/ibraheemdev/modern-unix
 - ripgrep-all
 - shortcut management
 - get riod of ohmyzsh, use zinit?
+- direnv https://direnv.net/
 
 idea: launch everything from commandline and use something like dmenu to quickly use aliases for launching/switching etc.
