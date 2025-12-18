@@ -31,6 +31,8 @@
 
 - use glab mr to create merge requests from command line and create a Teams message for review?
 
+- zellij fix copy paste
+
 Things to test:
 https://github.com/ibraheemdev/modern-unix
 - Application Launcher: Ulaunch, Albert
