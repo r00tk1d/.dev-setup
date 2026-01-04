@@ -38,6 +38,7 @@ The dotfiles in this repo are the single source truth and should always overwrit
 - mac:
     - skhd (or rcmd?)
     - rectangle
+    - https://totalspaces.binaryage.com/ ?
     - (rcmd?)
     - (yabai?)
     - (hyperkey? CapsLock -> hyperkey)
@@ -63,6 +64,7 @@ The dotfiles in this repo are the single source truth and should always overwrit
 - dirhistory 
 - fzf
 - mvn
+- direnv
 
 ## Containerization
 - docker
@@ -79,6 +81,7 @@ The dotfiles in this repo are the single source truth and should always overwrit
 - navi
 - postgresql-client
 - yazi
+- direnv
 
 ## GUI-Apps
 - spotify

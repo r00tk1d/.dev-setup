@@ -17,3 +17,4 @@ bash <(curl -sL https://raw.githubusercontent.com/denisidoro/navi/master/scripts
 sudo apt-get -q install -y postgresql-client || handle_fail "postgresql-client" # Client for postgres DBs
 sudo snap install yazi --classic # terminal file manager TODO snap install puts the dotfiles in another location! Change to other installation method
 cargo install --locked zellij
+sudo apt-get -q install -y direnv || handle_fail "direnv" # Environment variable manager
