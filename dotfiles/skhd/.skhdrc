@@ -1,0 +1,11 @@
+# Hyper + T -> Terminal (using iTerm2 as example)
+hyper - t : ~/.config/scripts/focus_app.sh "iTerm"
+
+# Hyper + S -> Spotify
+hyper - s : ~/.config/scripts/focus_app.sh "Spotify"
+
+# Hyper + C -> VSCode
+hyper - c : ~/.config/scripts/focus_app.sh "Visual Studio Code"
+
+# Hyper + I -> IntelliJ
+hyper - i : ~/.config/scripts/focus_app.sh "IntelliJ IDEA"
