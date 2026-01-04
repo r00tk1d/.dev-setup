@@ -13,7 +13,7 @@ alias pprint='f() { echo -e "$(xclip -selection clipboard -o)" };f'
 alias mdir='f() { mkdir -p $1 && cd "$_" };f' 
 
 # Open file in the default application
-alias xo="xdg-open" 
+alias xo="xdg-open" # TODO macOS: use "open" instead of xdg-open
 # Use zoxide instead of cd
 alias cd="z"
 
