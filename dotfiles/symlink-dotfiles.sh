@@ -30,9 +30,7 @@ ln -sf "$DOTFILES_DIR/config/.config/helix/config.toml" "$HOME/.config/helix/con
 ln -sf "$DOTFILES_DIR/config/.config/starship.toml" "$HOME/.config/starship.toml"
 
 # .local
-ln -sf "$DOTFILES_DIR/scripts/.local/bin/canvas.html" "$HOME/.local/bin/canvas.html"
-ln -sf "$DOTFILES_DIR/scripts/.local/bin/canvas.sh" "$HOME/.local/bin/canvas.sh"
-ln -sf "$DOTFILES_DIR/scripts/.local/bin/dev-morning.sh" "$HOME/.local/bin/dev-morning.sh"
+mkdir -p ~/.local/bin
 ln -sf "$DOTFILES_DIR/scripts/.local/bin/git-bisect-find-bug.sh" "$HOME/.local/bin/git-bisect-find-bug.sh"
 ln -sf "$DOTFILES_DIR/scripts/.local/bin/switch-window.sh" "$HOME/.local/bin/switch-window.sh"
 ln -sf "$DOTFILES_DIR/scripts/.local/bin/timer.sh" "$HOME/.local/bin/timer.sh"
