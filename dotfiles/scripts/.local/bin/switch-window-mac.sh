@@ -1,5 +1,9 @@
 #!/bin/bash
 
+### App not open -> Open and Focus App
+### App open but not focused -> Focus App
+### App open and focused -> Cycle to next window of the App
+
 APP_NAME=$1
 
 # Check if the app is running

@@ -15,6 +15,7 @@ handle_fail() {
     echo "Installation of $1 failed"
 }
 
+
 ##########################
 # Core Utilities
 ##########################
@@ -105,7 +106,7 @@ brew install direnv || handle_fail "direnv"
 brew install --cask docker || handle_fail "docker"
 
 ##########################
-# software (Casks)
+# gui apps
 ##########################
 brew install --cask libreoffice || handle_fail "libreoffice"
 brew install --cask keepassxc || handle_fail "keepassxc"
@@ -121,6 +122,11 @@ brew install --cask intellij-idea || handle_fail "intellij-idea"
 ##########################
 brew install asmvik/formulae/skhd
 skhd --start-service
+
+
+
+
+
 
 if [ -n "$FAILED_PACKAGES" ]; then
     echo "Summary: Failed to install the following packages: '$FAILED_PACKAGES'"

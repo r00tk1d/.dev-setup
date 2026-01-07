@@ -23,6 +23,8 @@ I think US QWERTY keyboard using the ANSI physical layout are the best for progr
 ## Managing dotfiles (why no dotfile manager like stow)
 The dotfiles in this repo are the single source truth and should always overwrite local files. With stow its not easily possible to achieve this behavior. Furthermore it hides what actually happens. With symlinks its one less dependency and straight forward to understand. A little bit more manual work if I want to add a new dotfile, but this also keeps me in the loop how many dotfiles i actually have and reminds me of reducing them to get a minimal setup.
 
+However, I might switch to a dotfile manager in the future for easier maintanability (like automatically creating folders, backup old dotfiles that are currently just overwritten and automatic updates of symlinks).
+
 
 # What?
 
@@ -31,23 +33,43 @@ The dotfiles in this repo are the single source truth and should always overwrit
 - Appbar left
 
 ## Window Management
-- ubuntu:
-    - gnome-tweak-tool
-    - wmctrl
-    - xdotool
-- mac:
-    - skhd (or rcmd?)
-    - rectangle
-    - https://totalspaces.binaryage.com/ ?
-    - (rcmd?)
-    - (yabai?)
-    - (hyperkey? CapsLock -> hyperkey)
 
-## Shortcuts
+### Switch between apps and windows quickly
+Caps Lock is remapped to Hyperkey.
+
+Switch to certain app windows by shortcut: Hyperkey + <letter>
+-> App not open -> Open and Focus App
+-> App open but not focused -> Focus App
+-> App open and focused -> Cycle to next window of the App
+
+Hyperkey + Shift <letter>
+-> Open new window of App
+
+### Move windows quickly
+Hyperkey + right arrow -> Move focused window to right half of the screen
+Hyperkey + left arrow -> Move focused window to left half of the screen
+Hyperkey + up arrow -> Maximize focused window
+
+Hyperkey + Shift + right arrow -> Move focused window to next monitor right
+Hyperkey + Shift + left arrow -> Move focused window to next monitor left
+
+### Achieve this window management
+- ubuntu:
+    - wmctrl (manage windows)
+    - xdotool (simulate keyboard/mouse input)
+- mac:
+    - skhd (global hotkeys)
+    - rectangle (window management)
+    - Hyperkey (Capslock remap)
+
+## Browser
+- Brave
+    - vimium
+    - jira branch name generator
 
 ## Keyboard
-- EurKEY
-- Remap CapsLock to Esc
+- EurKEY Layout
+- Remap CapsLock to Hyperkey
 
 ## Terminal
 - Mac:
@@ -89,19 +111,12 @@ The dotfiles in this repo are the single source truth and should always overwrit
 - libreoffice
 - keepassxc
 - vscode
+- intellij
 - brave
-    - vimium
-    - jira branch name generator
 
 ## Auto Setups
 - git
 - dotfiles
-- ssh -> create ssh (remove from )
+- ssh
 
-## 
-
-## Manual Setup
-
-## Aliases
-
-## Cheatsheets
+## Manual Setups
