@@ -1,0 +1,40 @@
+app,action,windows,mac
+intellij,Jump to Implementation,CTRL+ALT+B,CMD+OPT+B
+intellij,Jump to Usage,CTRL+B,CMD+B
+intellij,Move Line Up/Down,CTRL+SHIFT+UP/DOWN,OPT+SHIFT+UP/DOWN
+intellij,Jump To Previous/Next Location,ALT+SHIFT+LEFT/RIGHT,CMD+OPT+LEFT/RIGHT
+intellij,Duplicate Line,CTRL+D,CMD+D
+intellij,Paste from Clipboard History,CTRL+SHIFT+V,CMD+SHIFT+V
+intellij,Mark word from cursor,CTRL+W,OPT+UP
+intellij,Remove Line,CTRL+Y,CMD+DELETE
+intellij,Rename,SHIFT+F6,SHIFT+F6
+intellij,Jump to next problem in code,F2,F2
+intellij,Extract marked Code into a variable,CTRL+ALT+V,CMD+OPT+V
+intellij,Go to Test or Implementation,CTRL+SHIFT+T,CMD+SHIFT+T
+intellij,Format Code,CTRL+ALT+L,CMD+OPT+L
+intellij,Jump to next/previous function,ALT+UP/DOWN,CTRL+UP/DOWN
+intellij,Show Recent Files,CTRL+E,CMD+E
+intellij,Compare two marked files,CTRL+D,CMD+D
+intellij,Undo,CTRL+Z,CMD+Z
+intellij,Redo,CTRL+SHIFT+Z,CMD+SHIFT+Z
+intellij,Move Up/Down in File,CTRL+UP/DOWN,CMD+UP/DOWN
+intellij,Toggle Folder View,ALT+1,CMD+1
+intellij,Set Breakpoint at current line,CTRL+F8,CMD+F8
+intellij,Resume,F9,OPT+CMD+R
+intellij,Step Over,F8,F8
+intellij,Step Into,F7,F7
+intellij,Go to next/previous tab,ALT+LEFT/RIGHT,CMD+SHIFT+[ / ]
+intellij,Open Terminal,ALT+F12,OPT+F12
+intellij,Go to Interface from the Implementation,CTRL+U,CMD+U
+intellij,Change Method Signature,CTRL+F6,CMD+F6
+intellij,Evaluate Marked Expression,ALT+SHIFT+8,OPT+F8
+intellij,Close Current File,CTRL+F4,CMD+W
+intellij,Rollback Changes in this line,CTRL+ALT+Z,CMD+OPT+Z
+intellij,Rerun Last Test,CTRL+F5,CTRL+R
+intellij,Focus on Editor,ESC,ESC
+intellij,Update Project,CTRL+T,CMD+T
+intellij,Show Structure of current file,CTRL+F12,CMD+F12
+intellij,Run Current Test Under Cursor,SHIFT+F10,CTRL+SHIFT+R
+intellij,Hippie Complete,ALT+/,OPT+/
+intellij,Autocomplete,ALT+SPACE,CTRL+SPACE
+intellij,Opens the caller/callee hierarchy for a method,CTRL+ALT+H,CTRL+OPT+H
