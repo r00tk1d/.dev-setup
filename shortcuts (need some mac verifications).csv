@@ -141,16 +141,20 @@ yazi,Next tab,],]
 yazi,Swap with prev,{,{
 yazi,Swap with next,},}
 yazi,Close tab,CTRL+c,CMD+c
-Yazi,Sort by modified time,",m",",m"
-Yazi,Sort by modified time (reverse),",M",",M"
-Yazi,Sort by birth time,",b",",b"
-Yazi,Sort by birth time (reverse),",B",",B"
-Yazi,Sort by file extension,",e",",e"
-Yazi,Sort by file extension (reverse),",E",",E"
-Yazi,Sort alphabetically,",a",",a"
-Yazi,Sort alphabetically (reverse),",A",",A"
-Yazi,Sort naturally,",n",",n"
-Yazi,Sort naturally (reverse),",N",",N"
-Yazi,Sort by size,",s",",s"
-Yazi,Sort by size (reverse),",S",",S"
-Yazi,Sort randomly,",r",",r"
+yazi,Sort by modified time,",m",",m"
+yazi,Sort by modified time (reverse),",M",",M"
+yazi,Sort by birth time,",b",",b"
+yazi,Sort by birth time (reverse),",B",",B"
+yazi,Sort by file extension,",e",",e"
+yazi,Sort by file extension (reverse),",E",",E"
+yazi,Sort alphabetically,",a",",a"
+yazi,Sort alphabetically (reverse),",A",",A"
+yazi,Sort naturally,",n",",n"
+yazi,Sort naturally (reverse),",N",",N"
+yazi,Sort by size,",s",",s"
+yazi,Sort by size (reverse),",S",",S"
+yazi,Sort randomly,",r",",r"
+k9s,Describe pod,d,d
+k9s,View pod logs,l,l
+k9s,Delete pod,CTRL+d,CTRL+d
+k9s,Exit,:q,:q
