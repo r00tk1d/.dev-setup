@@ -37,26 +37,34 @@ However, I might switch to a dotfile manager in the future for easier maintanabi
 ### Switch between apps and windows quickly
 Caps Lock is remapped to Hyperkey.
 
-Switch to certain app windows by shortcut: Hyperkey + <letter>
--> App not open -> Open and Focus App
--> App open but not focused -> Focus App
--> App open and focused -> Cycle to next window of the App
+Switch to certain app window by shortcut: Hyperkey + LETTER
+```
+App not open -> Open and Focus App
 
-Hyperkey + Shift <letter>
--> Open new window of App
+App open but not focused -> Focus App
+
+App open and focused -> Cycle to next window of the App
+```
+
+Hyperkey + Shift + LETTER
+```
+Open new window of App
+```
 
 ### Move windows quickly
-Hyperkey + right arrow -> Move focused window to right half of the screen
-Hyperkey + left arrow -> Move focused window to left half of the screen
-Hyperkey + up arrow -> Maximize focused window
+```
+Hyperkey + right arrow/l -> Move focused window to right half of the screen
+Hyperkey + left arrow/h -> Move focused window to left half of the screen
+Hyperkey + up arrow/k -> Maximize focused window
 
-Hyperkey + Shift + right arrow -> Move focused window to next monitor right
-Hyperkey + Shift + left arrow -> Move focused window to next monitor left
-
+Hyperkey + Shift + right arrow/l-> Move focused window to next monitor right
+Hyperkey + Shift + left arrow/h -> Move focused window to next monitor left
+```
 ### Achieve this window management
-- ubuntu:
+- ubuntu (x11):
     - wmctrl (manage windows)
     - xdotool (simulate keyboard/mouse input)
+    - gnome (capslock remap to hyperkey, window management)
 - mac:
     - skhd (global hotkeys)
     - rectangle (window management)
@@ -64,46 +72,48 @@ Hyperkey + Shift + left arrow -> Move focused window to next monitor left
 
 ## Browser
 - Brave
-    - vimium
-    - jira branch name generator
+    - [vimium](https://github.com/philc/vimium)
+    - [jira branch name generator](https://github.com/r00tk1d/jira-branch-name-generator)
+
+
 
 ## Keyboard
-- EurKEY Layout
+- [EurKEY Layout](https://eurkey.steffen.bruentjen.eu/)
 - Remap CapsLock to Hyperkey
 
 ## Terminal
 - Mac:
-    - iTerm2
-    - Starship
-    - JetBrains Mono Nerd Font
+    - [iTerm2](https://iterm2.com/)
+    - [starship](https://github.com/starship/starship)
+    - [JetBrains Mono Nerd Font](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/JetBrainsMono)
     - TokyoNight
 
-## Shell ohmyzsh (Zsh Plugins)
-- zsh-autosuggestions
-- zsh-syntax-highlighting
-- fzf-tab
-- git
-- dirhistory 
-- fzf
-- mvn
-- direnv
+## Zsh Plugins
+I use [ohmyzsh](https://github.com/ohmyzsh/ohmyzsh) as zsh framework.
+- [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
+- [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
+- [fzf-tab](https://github.com/Aloxaf/fzf-tab)
+- [git](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git)
+- [dirhistory](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/dirhistory)
+- [fzf](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/fzf)
+- [mvn](https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/mvn)
 
 ## Containerization
-- docker
+- [docker](https://www.docker.com/)
 
 ## CLI-Apps
-- lazygit
-- helix
-- fzf
+- [lazygit](https://github.com/jesseduffield/lazygit)
+- [helix](https://helix-editor.com/)
+- [fzf](https://github.com/junegunn/fzf)
 - xclip (linux only)
-- ripgrep
-- jq
-- bat
-- z
-- navi
+- [ripgrep](https://github.com/BurntSushi/ripgrep)
+- [jq](https://github.com/stedolan/jq)
+- [bat](https://github.com/sharkdp/bat)
+- [zoxide](https://github.com/ajeetdsouza/zoxide)
+- [navi](https://github.com/denisidoro/navi)
 - postgresql-client
-- yazi
-- direnv
+- [yazi](https://github.com/sxyazi/yazi)
+- [direnv](https://github.com/direnv/direnv)
 
 ## GUI-Apps
 - spotify
