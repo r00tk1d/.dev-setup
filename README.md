@@ -117,12 +117,12 @@ I use [ohmyzsh](https://github.com/ohmyzsh/ohmyzsh) as zsh framework.
 
 ## GUI-Apps
 - spotify
-- terminal
 - libreoffice
 - keepassxc
 - vscode
 - intellij
 - brave
+- dbeaver
 
 ## Auto Setups
 - git

@@ -1,0 +1,156 @@
+app,action,gnome,mac
+intellij,Jump to Implementation,CTRL+ALT+b,CMD+OPT+b
+intellij,Jump to Usage,CTRL+b,CMD+b
+intellij,Move Line Up/Down,CTRL+SHIFT+UP/DOWN,OPT+SHIFT+UP/DOWN
+intellij,Jump To Previous/Next Location,ALT+SHIFT+LEFT/RIGHT,CMD+OPT+LEFT/RIGHT
+intellij,Duplicate Line,CTRL+d,CMD+d
+intellij,Paste from Clipboard History,CTRL+SHIFT+v,CMD+SHIFT+v
+intellij,Mark word from cursor,CTRL+w,OPT+UP
+intellij,Remove Line,CTRL+y,CMD+DELETE
+intellij,Rename,SHIFT+F6,SHIFT+F6
+intellij,Jump to next problem in code,F2,F2
+intellij,Extract marked Code into a variable,CTRL+ALT+v,CMD+OPT+v
+intellij,Find in Path,CTRL+SHIFT+f,CMD+SHIFT+f
+intellij,Replace in Path,CTRL+SHIFT+f,CMD+SHIFT+r
+intellij,Go to Test or Implementation,CTRL+SHIFT+t,CMD+SHIFT+t
+intellij,Format Code,CTRL+ALT+L,CMD+OPT+L
+intellij,Jump to next/previous function,ALT+UP/DOWN,CTRL+UP/DOWN
+intellij,Show Recent Files,CTRL+e,CMD+e
+intellij,Compare two marked files,CTRL+d,CMD+d
+intellij,Undo,CTRL+z,CMD+z
+intellij,Rollback Changes in this line,CTRL+ALT+Z,CMD+OPT+Z
+intellij,Redo,CTRL+SHIFT+Z,CMD+SHIFT+z
+intellij,Move Up/Down in File,CTRL+UP/DOWN,CMD+UP/DOWN
+intellij,Toggle Folder View,ALT+1,CMD+1
+intellij,Debugging: Set Breakpoint at current line,CTRL+F8,CMD+F8
+intellij,Debugging: Resume,F9,OPT+CMD+r
+intellij,Debugging: Step Over,F8,F8
+intellij,Debugging: Step Into,F7,F7
+intellij,Go to next tab,ALT+RIGHT,CMD+SHIFT+[ / ]
+intellij,Go to previous tab,ALT+LEFT,CMD+SHIFT+[ / ]
+intellij,Show Intention Actions and Quick-Fixes,ALT+ENTER,OPT+ENTER
+intellij,Search for Action,CTRL+SHIFT+a,CMD+SHIFT+a
+intellij,Open Terminal,ALT+F12,OPT+F12
+intellij,Go to Interface from the Implementation,CTRL+u,CMD+u
+intellij,Change Method Signature,CTRL+F6,CMD+F6
+intellij,Evaluate Marked Expression,ALT+SHIFT+8,OPT+F8
+intellij,Close Current File,CTRL+F4,CMD+w
+intellij,Rerun Last Test,CTRL+F5,CMD+SHIFT+r
+intellij,Focus on Editor,ESC,ESC
+intellij,Update Project,CTRL+t,CMD+t
+intellij,Show Structure of current file,CTRL+F12,CMD+F12
+intellij,Run Current Test Under Cursor,SHIFT+F10,CMD+SHIFT+R
+intellij,Search Everywhere,SHIFT+SHIFT,SHIFT+SHIFT
+intellij,Hippie Complete,ALT+/,OPT+/
+intellij,Autocomplete,ALT+SPACE,CTRL+SPACE
+intellij,Opens the caller/callee hierarchy for a method,CTRL+ALT+H,CTRL+OPT+H
+vimium,Scroll down,j,j
+vimium,Scroll up,k,k
+vimium,Scroll to the top of the page,gg,gg
+vimium,Scroll to the bottom of the page,G,G
+vimium,Reload the page,r,r
+vimium,Copy the current URL to the clipboard,yy,yy
+vimium,Open the clipboard's URL in the current tab,p,p
+vimium,Open the clipboard's URL in a new tab,P,P
+vimium,Focus the first text input on the page,gi,gi
+vimium,Open a link in the current tab,f,f
+vimium,Open a link in a new tab,F,F
+vimium,Enter find mode,/,/
+vimium,In Find Mode: Cycle forward to the next find match,n,n
+vimium,In Find Mode: Cycle backward to the previous find match,N,N
+vimium,"Open URL, bookmark or history entry",o,o
+vimium,"Open URL, bookmark or history entry in a new tab",O,O
+vimium,Open a bookmark,b,b
+vimium,Open a bookmark in a new tab,B,B
+vimium,Search through your open tabs,T,T
+vimium,Open a new tab,t,t
+vimium,Go back in history,H,H
+vimium,Go forward in history,L,L
+vimium,Go one tab left,J,J
+vimium,Go one tab right,K,K
+vimium,Show help,?,?
+brave,Create new tab,CTRL+t,CMD+t
+brave,Close current tab,CTRL+w,CMD+w
+brave,Restore closed tab,CTRL+SHIFT+t,CMD+SHIFT+t
+brave,Browse through recently used tabs,CTRL+TAB,CMD+TAB
+fzf,Open fzf file finder,CTRL+T,CTRL+T
+fzf,Open fzf command history,CTRL+R,CTRL+R
+fzf,Open fzf directory finder and cd into it,ALT+C,OPT+C
+dirhistory,Go to previous directory,ALT+LEFT,OPTION+LEFT
+dirhistory,Go to next directory,ALT+RIGHT,OPTION+RIGHT
+dirhistory,Move into the parent directory,ALT+UP,OPTION+UP
+dirhistory,Move into the first child directory by alphabetical order,ALT+DOWN,OPTION+DOWN
+windowmanagement,Tile window to the left half of the screen,Hyper+h,Hyper+h
+windowmanagement,Tile window to the right half of the screen,Hyper+l,Hyper+l
+windowmanagement,Maximize window,Hyper+k,Hyper+k
+windowmanagement,Move window to the left screen,Hyper+SHIFT+j,Hyper+SHIFT+h
+windowmanagement,Move window to the right screen,Hyper+SHIFT+l,Hyper+SHIFT+l
+windowmanagement,Switch to App,Hyper+LETTER,Hyper+LETTER
+windowmanagement,Open new window of App,Hyper+SHIFT+LETTER,Hyper+SHIFT+LETTER
+app,action,gnome,mac
+yazi,Quit, q, q
+yazi,Open Help,F1,F1
+yazi,Move cursor up,k,k
+yazi,Move cursor down,j,j
+yazi,Enter directory,l,l
+yazi,Parent directory,h,h
+yazi,Seek up 5 preview lines,K,K
+yazi,Seek down 5 preview lines,J,J
+yazi,Top of list,gg,gg
+yazi,Bottom of list,G,G
+yazi,Toggle selection,SPACE,SPACE
+yazi,Selection mode on,v,v
+yazi,Selection mode off,V,V
+yazi,Select all,CTRL+a,CMD+a
+yazi,Inverse select,CTRL+r,CMD+r
+yazi,Cancel selection,ESC,ESC
+yazi,Open selected file,ENTER,ENTER
+yazi,Open selected file,o,o
+yazi,Show file info,TAB,TAB
+yazi,Copy selected files,y,y
+yazi,Cut selected files,x,x
+yazi,Paste files,p,p
+yazi,Overwrite paste,P,P
+yazi,Cancel copy,Y,Y
+yazi,Cancel cut,X,X
+yazi,Trash selected files,d,d
+yazi,Permanently delete,D,D
+yazi,Rename selected file(s),r,r
+yazi,Toggle hidden files,.,.
+yazi,Run shell command,;,;
+yazi,Run blocking shell command,:,:
+yazi,Symlink absolute path,-,-
+yazi,Symlink relative path,_,_
+yazi,Hardlink,CTRL+-,CMD+-
+yazi,Copy file path,cc,cc
+yazi,Copy dir path,cd,cd
+yazi,Copy filename,cf,cf
+yazi,Copy filename without extension,cn,cn
+yazi,Filter files,f,f
+yazi,Find next file,/,/
+yazi,Find prev file,?,?
+yazi,Next match,n,n
+yazi,Prev match,N,N
+yazi,Search files by name using fd,s,s
+yazi,Search files by content using ripgrep,S,S
+yazi,Cancel search,CTRL+s,CMD+s
+yazi,New tab,t,t
+yazi,Switch to tab NUMBER,NUBMER,NUMBER
+yazi,Prev tab,[,[
+yazi,Next tab,],]
+yazi,Swap with prev,{,{
+yazi,Swap with next,},}
+yazi,Close tab,CTRL+c,CMD+c
+Yazi,Sort by modified time,",m",",m"
+Yazi,Sort by modified time (reverse),",M",",M"
+Yazi,Sort by birth time,",b",",b"
+Yazi,Sort by birth time (reverse),",B",",B"
+Yazi,Sort by file extension,",e",",e"
+Yazi,Sort by file extension (reverse),",E",",E"
+Yazi,Sort alphabetically,",a",",a"
+Yazi,Sort alphabetically (reverse),",A",",A"
+Yazi,Sort naturally,",n",",n"
+Yazi,Sort naturally (reverse),",N",",N"
+Yazi,Sort by size,",s",",s"
+Yazi,Sort by size (reverse),",S",",S"
+Yazi,Sort randomly,",r",",r"
