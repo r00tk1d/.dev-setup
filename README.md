@@ -35,9 +35,9 @@ However, I might switch to a dotfile manager in the future for easier maintanabi
 ## Window Management
 
 ### Switch between apps and windows quickly
-Caps Lock is remapped to Hyperkey.
+MOD = Super (Ubuntu) / Control + Option (Mac)
 
-Switch to certain app window by shortcut: Hyperkey + LETTER
+Switch to certain app window by shortcut: Mod + LETTER
 ```
 App not open -> Open and Focus App
 
@@ -46,29 +46,28 @@ App open but not focused -> Focus App
 App open and focused -> Cycle to next window of the App
 ```
 
-Hyperkey + Shift + LETTER
-```
-Open new window of App
-```
+Open new instance of app by shortcut: Mod + Shift + LETTER
+
 
 ### Move windows quickly
-```
-Hyperkey + right arrow/l -> Move focused window to right half of the screen
-Hyperkey + left arrow/h -> Move focused window to left half of the screen
-Hyperkey + up arrow/k -> Maximize focused window
+MOD = Super (Ubuntu) / Control + Option (Mac)
 
-Hyperkey + Shift + right arrow/l-> Move focused window to next monitor right
-Hyperkey + Shift + left arrow/h -> Move focused window to next monitor left
+```
+MOD + l -> Move focused window to right half of the screen
+MOD + h -> Move focused window to left half of the screen
+MOD + k -> Maximize focused window
+
+MOD + Shift + l-> Move focused window to next monitor right
+MOD + Shift + h -> Move focused window to next monitor left
 ```
 ### Achieve this window management
 - ubuntu (x11):
     - wmctrl (manage windows)
     - xdotool (simulate keyboard/mouse input)
-    - gnome (capslock remap to hyperkey, window management)
+    - gnome (map shortcuts to scripts, window management)
 - mac:
     - skhd (global hotkeys)
     - rectangle (window management)
-    - Hyperkey (Capslock remap)
 
 ## Browser
 - Brave
