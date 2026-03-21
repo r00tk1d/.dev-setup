@@ -70,6 +70,14 @@ curl https://sh.rustup.rs -sSf | sh || handle_fail "rust"
 source $HOME/.cargo/env
 
 ##########################
+# keyboard setup
+##########################
+git clone https://github.com/rvaiya/keyd
+cd keyd
+make && sudo make install
+sudo systemctl enable --now keyd
+
+##########################
 # terminal setup
 ##########################
 sudo apt-get -q install -y starship || handle_fail "starship"
