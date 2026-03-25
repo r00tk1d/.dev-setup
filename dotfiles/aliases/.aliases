@@ -1,30 +1,38 @@
-alias bat="batcat"
 alias lg="lazygit"
 alias c="code ."
 alias zj="zellij"
-if [[ "$(uname)" == "Darwin" ]]; then
-    alias clip="pbcopy"
-    alias paste="pbpaste"
+
+if [[ "$OSTYPE" == darwin* ]]; then
+    alias cpy="pbcopy"
+    alias pst="pbpaste"
+    alias o="open"
 else
-    alias clip="xclip -selection clipboard"
-    alias paste="xclip -selection clipboard -o"
+    alias cpy="xclip -selection clipboard"
+    alias pst="xclip -selection clipboard -o"
+    alias o="xdg-open"
+    alias bat="batcat"
 fi
 
 # recursive fuzzy search for file NAME starting in the current directory and open the selected file in vs code
-alias fpv="fzf --preview 'batcat --style=numbers --color=always {}' --preview-window=up:50% --bind 'enter:execute(code {})'"
-# pretty prints json from the clipboard content 
-alias pjson='f() { xclip -selection clipboard -o | jq };f'
-# Pretty-print a string from clipboard with the interpretation of backslash escapes
-alias pprint='f() { echo -e "$(xclip -selection clipboard -o)" };f'
-# Create and cd into a directory with subdirectories
-alias mdir='f() { mkdir -p $1 && cd "$_" };f' 
+fpv() {
+  local bat_cmd
+  bat_cmd=$(command -v batcat || command -v bat)
 
-# Open file in the default application
-alias xo="xdg-open" # TODO macOS: use "open" instead of xdg-open
-# Use zoxide instead of cd
+  fzf \
+    --preview "$bat_cmd --style=numbers --color=always {}" \
+    --preview-window=up:50% \
+    --bind "enter:execute(code '{}')"
+}
+# pretty prints json from the clipboard content
+alias pjson='f() { pst | jq; }; f'
+# Pretty-print a string from clipboard with the interpretation of backslash escapes
+alias pprint='f() { printf "%b\n" "$(pst)"; }; f'
+# Create and cd into a directory with subdirectories
+alias mdir='f() { mkdir -p "$1" && cd "$1"; }; f'
+
 alias cd="z"
 
-# Run Scripts/Programs
+# scripts
 alias timer="timer.sh"
 alias uptimes="uptimes.sh"
 alias cr="code-review.sh"
