@@ -3,7 +3,7 @@
 
 set -e
 
-DEFAULT_BASE="develop"
+DEFAULT_BASE="main"
 BASE_BRANCH="$DEFAULT_BASE"
 
 git fetch --all --prune
@@ -19,9 +19,9 @@ if [[ ! "$CONFIRM" =~ ^[Yy]$ ]]; then
     exit 1
   fi
 fi
-echo "👉 Selected base branch: $BASE_BRANCH"
+echo "Selected base branch: $BASE_BRANCH"
 
-#Determine BRANCH for code review
+# Determine BRANCH for code review
 BRANCH=$(git for-each-ref refs/heads refs/remotes --format='%(refname:short)' \
   | grep -vx "^$BASE_BRANCH\$" \
   | fzf --height 10 --prompt="cr branch> " --ansi)
@@ -31,8 +31,7 @@ if [ -z "$BRANCH" ]; then
   exit 1
 fi
 
-echo "👉 Selected cr branch: $BRANCH"
-
+echo "Selected cr branch: $BRANCH"
 
 # Determine if the selected BRANCH is a remote branch
 if [[ "$BRANCH" == origin/* ]]; then
@@ -51,9 +50,10 @@ else
   git checkout "$BRANCH"
 fi
 
+git fetch origin "$BASE_BRANCH":"$BASE_BRANCH"
 
-echo "Finding fork point between '$BASE_BRANCH' and '$BRANCH'"
-FORK_POINT=$(git merge-base --fork-point "$BASE_BRANCH" "$BRANCH" 2>/dev/null || git merge-base "$BASE_BRANCH" "$BRANCH")
+echo "Finding true divergence point between '$BASE_BRANCH' and '$BRANCH'"
+FORK_POINT=$(git merge-base "$BASE_BRANCH" "$BRANCH")
 
 if [ -z "$FORK_POINT" ]; then
   echo "❌ Could not determine fork point."
@@ -71,6 +71,6 @@ fi
 echo "Soft resetting branch to parent of first commit ($FIRST_COMMIT)"
 git reset --soft "${FIRST_COMMIT}^"
 
-echo "✅ Done. Branch $BRANCH is now soft reset to its start (base: $BASE_BRANCH)."
+echo "Done. Branch $BRANCH is now soft reset to its start relative to base $BASE_BRANCH."
 
 printf "\nAfter review and changes, run:\n\ngit reset --mixed ORIG_HEAD\n\n"
