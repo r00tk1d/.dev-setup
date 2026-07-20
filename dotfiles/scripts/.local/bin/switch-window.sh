@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# Linux only
+
 ### App not open -> Open and Focus App
 ### App open but not focused -> Focus App
 ### App open and focused -> Cycle to next window of the App

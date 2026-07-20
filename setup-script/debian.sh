@@ -2,6 +2,7 @@
 set -x
 
 CURRENT_DIR="$(cd "$(dirname "$0")" && pwd)" # TODO is this necessary?
+DEV_SETUP_DIR="$(cd "$(dirname "$0")" && cd .. && pwd)"
 
 # log all output to log.out
 exec 3>&1 4>&2
@@ -125,6 +126,7 @@ sudo apt-get -q install -y postgresql-client || handle_fail "postgresql-client" 
 sudo snap install yazi --classic # terminal file manager TODO snap install puts the dotfiles in another location! Change to other installation method
 cargo install --locked zellij
 sudo apt-get -q install -y direnv || handle_fail "direnv" # Environment variable manager
+curl -fsSL https://raw.githubusercontent.com/luanvil/lnko/main/install.sh | bash # symlink manager for dotfiles
 
 ##########################
 # container setup
@@ -143,6 +145,12 @@ sudo snap install brave || handle_fail "brave-browser"
 sudo snap install dbeaver-ce || handle_fail "dbeaver"
 sudo snap install intellij-idea --classic || handle_fail "intellij-idea"
 
+
+##########################
+# symlink dotfiles
+##########################
+cd $DEV_SETUP_DIR
+lnko link *
 
 
 

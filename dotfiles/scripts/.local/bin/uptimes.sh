@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# Linux only
+
 ### Current Uptime ###
 today_start_time=$(last | grep -m1 reboot | awk '{print $8}')
 today_start_seconds=$(date -d "$today_start_time" +%s)

@@ -32,6 +32,70 @@ alias mdir='f() { mkdir -p "$1" && cd "$1"; }; f'
 
 alias cd="z"
 
+# Interactive Ripgrep Search with FZF/Batcat/Vim
+#
+# Usage:
+# rgf "search-term" (Searches the current directory)
+# rgf "search-term" <path> (Searches the specified path)
+#
+rgf() {
+    local search_term="$1"
+    # Use the second argument as the path, or default to "." if it's not provided.
+    local search_path="${2:-.}"
+    local line
+
+    # Let rg produce its default, colorized output, now using the search_path.
+    line=$(rg --line-number --color=always "$search_term" "$search_path" |
+    fzf --ansi \
+    --delimiter ':' \
+    --preview 'bat --style=numbers --color=always --highlight-line {2} {1}' \
+    --preview-window 'up,60%,border-bottom,+{2}+3/3' \
+    --bind 'enter:become(echo {1}:{2})')
+
+    # If fzf was exited without a selection, do nothing.
+    if [[ -n "$line" ]]; then
+        local file=$(echo "$line" | cut -d: -f1)
+        local lnum=$(echo "$line" | cut -d: -f2)
+        vim +"$lnum" "$file"
+    fi
+}
+
+
+### Notes Utils ###
+
+export NOTES_DIR="$HOME/notes"
+
+# Search notes
+sn() {
+    rgf "$1" "$NOTES_DIR"
+}
+
+# Create note with optional title
+cn() {
+    # 1. Ensure the notes directory exists.
+    mkdir -p "$NOTES_DIR"
+
+    local timestamp=$(date +"%Y-%m-%d_%H%M%S")
+    local filename_base=""
+
+    if [ -z "$1" ]; then
+        filename_base="${timestamp}.md"
+        local full_path="$NOTES_DIR/$filename_base"
+        touch "$full_path"
+        echo "Created file: $full_path"
+        vim "$full_path"
+    else
+        local slug
+        slug=$(echo "$1" | iconv -t ascii//TRANSLIT | sed -E 's/[^a-zA-Z0-9]+/-/g' | sed -E 's/^-+|-+$//g' | tr '[:upper:]' '[:lower:]')
+        filename_base="${timestamp}_${slug}.md"
+        local full_path="$NOTES_DIR/$filename_base"
+
+        printf "# %s\n\n" "$1" > "$full_path"
+        echo "Created file: $full_path"
+        vim +3 "$full_path"
+    fi
+}
+
 # scripts
 alias timer="timer.sh"
 alias uptimes="uptimes.sh"

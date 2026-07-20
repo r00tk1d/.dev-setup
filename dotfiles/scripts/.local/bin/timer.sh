@@ -4,20 +4,38 @@
 # and sends a notification when the time is up.
 # Usage: ./timer.sh <minutes>
 
-# Check if notify-send is available
-if ! command -v notify-send &> /dev/null; then
-    echo "notify-send could not be found. Please install libnotify-bin."
-    exit 1
-fi
-# Check if the user provided an argument
+set -euo pipefail
+
+# Detect platform
+OS="$(uname)"
+
+# Notification function
+notify() {
+    local title="$1"
+    local message="$2"
+
+    if [[ "$OS" == "Darwin" ]]; then
+        # macOS notification
+        osascript -e "display notification \"$message\" with title \"$title\""
+    else
+        # Linux notification
+        if command -v notify-send &> /dev/null; then
+            notify-send "$title" "$message" --urgency=critical
+        else
+            echo "notify-send not found; cannot send desktop notification."
+        fi
+    fi
+}
+
+# Check argument count
 if [ $# -ne 1 ]; then
     echo "Usage: $0 <minutes>"
     exit 1
 fi
 
-# Ensure a valid numeric argument is provided
-if [[ -z "$1" || ! "$1" =~ ^[0-9]+$ ]]; then
-    echo "Usage: $0 <minutes>"
+# Ensure numeric argument
+if ! [[ "$1" =~ ^[0-9]+$ ]]; then
+    echo "Usage: $0 <minutes> (must be a positive integer)"
     exit 1
 fi
 
@@ -41,5 +59,5 @@ done
 printf "\r\033[K"
 
 # Send notification and print message
-notify-send "$title" "$message" --urgency=critical 2>/dev/null
+notify "$title" "$message"
 echo "$message"

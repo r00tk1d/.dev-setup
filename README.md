@@ -7,8 +7,7 @@ My developer setup (currently Debian based).
 git clone https://github.com/r00tk1d/.dev-setup.git $HOME/.dev-setup
 ```
 2. Run scripts in `/setup-scripts`
-3. Link `/dotfiles`
-4. Apply Manual Settings in `/manual-settings`
+3. Apply Manual Settings in `/manual-settings`
 
 
 # Goal
@@ -20,12 +19,6 @@ git clone https://github.com/r00tk1d/.dev-setup.git $HOME/.dev-setup
 ## Keyboard
 I think US QWERTY keyboard using the ANSI physical layout are the best for programming and efficient typing. However, additionally I need to write german special characters every now and then. The EurKEY Layout fits these needs perfectly: (https://eurkey.steffen.bruentjen.eu/?lang=de).
 
-Kenkyo Layout forhhomerow mods and chords with keyd.
-
-## Managing dotfiles (why no dotfile manager like stow)
-The dotfiles in this repo are the single source truth and should always overwrite local files. With stow its not easily possible to achieve this behavior. Furthermore it hides what actually happens. With symlinks its one less dependency and straight forward to understand. A little bit more manual work if I want to add a new dotfile, but this also keeps me in the loop how many dotfiles i actually have and reminds me of reducing them to get a minimal setup.
-
-However, I might switch to a dotfile manager in the future for easier maintanability (like automatically creating folders, backup old dotfiles that are currently just overwritten and automatic updates of symlinks).
 
 
 # What?
@@ -115,6 +108,8 @@ I use [ohmyzsh](https://github.com/ohmyzsh/ohmyzsh) as zsh framework.
 - postgresql-client
 - [yazi](https://github.com/sxyazi/yazi)
 - [direnv](https://github.com/direnv/direnv)
+- [lnko](https://github.com/luanvil/lnko)
+- [herdr](https://github.com/luanvil/herdr) TODO: add herdr to setup script
 
 ## GUI-Apps
 - spotify
