@@ -14,7 +14,7 @@ git clone https://github.com/r00tk1d/.dev-setup.git $HOME/.dev-setup
 - Minimal setup for maximum joy.
 - Use sane defaults wherever possible.
 - Fast Navigation with keyboard (using shortcuts or fuzzy finding).
-- Animations are a no-no.
+- No useless animations.
 
 ## Keyboard
 I think US QWERTY keyboard using the ANSI physical layout are the best for programming and efficient typing. However, additionally I need to write german special characters every now and then. The EurKEY Layout fits these needs perfectly: (https://eurkey.steffen.bruentjen.eu/?lang=de).

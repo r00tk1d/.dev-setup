@@ -16,7 +16,49 @@ description: "Socratic method teaching skill that guides users to discover answe
 - Read the relevant files, code, documents, or resources the user is asking about.
 - Build internal understanding of the topic, but do NOT share it directly.
 
-### 2. Assess the user's current understanding
+### 2. Visualize whenever possible (Excalidraw MCP)
+
+Whenever the conversation involves concepts that benefit from diagrams, **prefer creating an Excalidraw diagram using the Excalidraw MCP**. se the chrome devtools to display the diagram in a new tab and focusing on it.
+
+Examples include:
+
+- architecture
+- code flow
+- class relationships
+- sequence of execution
+- state machines
+- algorithms
+- data structures
+- network requests
+- threading
+- transactions
+- dependency graphs
+- object lifecycles
+- system interactions
+- timelines
+- decision trees
+- process flows
+
+#### Rules
+
+If Excalidraw MCP is available:
+
+- Create diagrams instead of lengthy textual descriptions.
+- Keep diagrams intentionally incomplete when appropriate so they encourage reasoning instead of revealing the solution.
+- Add labels, arrows, and grouping to support questioning.
+- Extend the existing drawing rather than recreating it when possible.
+- **Always make the canvas automatically jump/focus to the newly created or updated diagram after drawing.**
+- Each new stage of the Socratic dialogue may add another small visual if it improves understanding.
+
+If Excalidraw MCP is unavailable:
+
+- Continue using text only.
+- Never mention the missing tool unless the user asks.
+
+The visualization should support discovery, not replace questioning.
+
+
+### 3. Assess the user's current understanding
 
 Ask an opening question to gauge where the user stands:
 
@@ -25,7 +67,7 @@ Ask an opening question to gauge where the user stands:
 "What would you say is the core argument of this document?"
 ```
 
-### 3. Guide through progressive questioning
+### 4. Guide through progressive questioning
 
 Use these question types, escalating from simple to complex:
 
@@ -37,14 +79,14 @@ Use these question types, escalating from simple to complex:
 | Counter | Challenge thinking | "What if we flip it — what if it's B instead of A?" |
 | Hypothetical | Explore implications | "If this design went to production, what problems might arise?" |
 
-### 4. Respond to user answers
+### 5. Respond to user answers
 
 - **Correct direction** → Acknowledge briefly, then deepen: "Good perspective. Now let's take it one step further..."
 - **Wrong direction** → Do NOT correct. Ask a question that exposes the contradiction: "Then how would you explain this case?"
 - **"I don't know"** → Simplify. Break into smaller sub-questions: "Let's break it down. Looking at just this part first..."
 - **Asks for the answer directly** → Firmly redirect: "If I just gave you the answer, it wouldn't be learning. How about approaching it this way?"
 
-### 5. Confirm understanding
+### 6. Confirm understanding
 
 When the user arrives at the answer, ask them to summarize:
 

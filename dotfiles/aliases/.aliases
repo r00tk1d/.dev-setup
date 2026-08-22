@@ -1,6 +1,6 @@
 alias lg="lazygit"
 alias c="code ."
-alias zj="zellij"
+alias hr="herdr"
 
 if [[ "$OSTYPE" == darwin* ]]; then
     alias cpy="pbcopy"
@@ -13,88 +13,20 @@ else
     alias bat="batcat"
 fi
 
-# recursive fuzzy search for file NAME starting in the current directory and open the selected file in vs code
-fpv() {
-  local bat_cmd
-  bat_cmd=$(command -v batcat || command -v bat)
+# git
+alias grs="git reset --soft HEAD~1"
 
-  fzf \
-    --preview "$bat_cmd --style=numbers --color=always {}" \
-    --preview-window=up:50% \
-    --bind "enter:execute(code '{}')"
-}
-# pretty prints json from the clipboard content
-alias pjson='f() { pst | jq; }; f'
-# Pretty-print a string from clipboard with the interpretation of backslash escapes
-alias pprint='f() { printf "%b\n" "$(pst)"; }; f'
 # Create and cd into a directory with subdirectories
 alias mdir='f() { mkdir -p "$1" && cd "$1"; }; f'
 
+# print current unix timestamp with 3 milliseconds
+alias now="python3 -c 'import time; print(int(time.time() * 1000))'"
+
+# Use zoxide instead of cd
 alias cd="z"
 
-# Interactive Ripgrep Search with FZF/Batcat/Vim
-#
-# Usage:
-# rgf "search-term" (Searches the current directory)
-# rgf "search-term" <path> (Searches the specified path)
-#
-rgf() {
-    local search_term="$1"
-    # Use the second argument as the path, or default to "." if it's not provided.
-    local search_path="${2:-.}"
-    local line
-
-    # Let rg produce its default, colorized output, now using the search_path.
-    line=$(rg --line-number --color=always "$search_term" "$search_path" |
-    fzf --ansi \
-    --delimiter ':' \
-    --preview 'bat --style=numbers --color=always --highlight-line {2} {1}' \
-    --preview-window 'up,60%,border-bottom,+{2}+3/3' \
-    --bind 'enter:become(echo {1}:{2})')
-
-    # If fzf was exited without a selection, do nothing.
-    if [[ -n "$line" ]]; then
-        local file=$(echo "$line" | cut -d: -f1)
-        local lnum=$(echo "$line" | cut -d: -f2)
-        vim +"$lnum" "$file"
-    fi
-}
-
-
-### Notes Utils ###
-
-export NOTES_DIR="$HOME/notes"
-
-# Search notes
-sn() {
-    rgf "$1" "$NOTES_DIR"
-}
-
-# Create note with optional title
-cn() {
-    # 1. Ensure the notes directory exists.
-    mkdir -p "$NOTES_DIR"
-
-    local timestamp=$(date +"%Y-%m-%d_%H%M%S")
-    local filename_base=""
-
-    if [ -z "$1" ]; then
-        filename_base="${timestamp}.md"
-        local full_path="$NOTES_DIR/$filename_base"
-        touch "$full_path"
-        echo "Created file: $full_path"
-        vim "$full_path"
-    else
-        local slug
-        slug=$(echo "$1" | iconv -t ascii//TRANSLIT | sed -E 's/[^a-zA-Z0-9]+/-/g' | sed -E 's/^-+|-+$//g' | tr '[:upper:]' '[:lower:]')
-        filename_base="${timestamp}_${slug}.md"
-        local full_path="$NOTES_DIR/$filename_base"
-
-        printf "# %s\n\n" "$1" > "$full_path"
-        echo "Created file: $full_path"
-        vim +3 "$full_path"
-    fi
-}
+# notes
+alias notes="vim $HOME/.notes.md"
 
 # scripts
 alias timer="timer.sh"

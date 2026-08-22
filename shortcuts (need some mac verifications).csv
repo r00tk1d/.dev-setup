@@ -1,4 +1,4 @@
-app,action,gnome,mac
+app,action,linux,mac
 intellij,Jump to Implementation,CTRL+ALT+b,CMD+OPT+b
 intellij,Jump to Usage,CTRL+b,CMD+b
 intellij,Move Line Up/Down,CTRL+SHIFT+UP/DOWN,OPT+SHIFT+UP/DOWN
@@ -87,7 +87,6 @@ windowmanagement,Move window to the left screen,Hyper+SHIFT+j,Hyper+SHIFT+h
 windowmanagement,Move window to the right screen,Hyper+SHIFT+l,Hyper+SHIFT+l
 windowmanagement,Switch to App,Hyper+LETTER,Hyper+LETTER
 windowmanagement,Open new window of App,Hyper+SHIFT+LETTER,Hyper+SHIFT+LETTER
-app,action,gnome,mac
 yazi,Quit, q, q
 yazi,Open Help,F1,F1
 yazi,Move cursor up,k,k
@@ -158,3 +157,23 @@ k9s,Describe pod,d,d
 k9s,View pod logs,l,l
 k9s,Delete pod,CTRL+d,CTRL+d
 k9s,Exit,:q,:q
+vim, Go to end of file and insert,GA,GA
+vim, Go to end of file and insert in new line,Go,Go
+terminal, Clear terminal,CTRL+l,CMD+k
+terminal, Move cursor to end of line,CTRL+e,CMD+e
+terminal, Move cursor to beginning of line,CTRL+a,CMD+a
+terminal, Move cursor one word left,ALT+b,OPT+b
+terminal, Move cursor one word right,ALT+f,OPT+f
+terminal, Delete from cursor to end of line,CTRL+k,CMD+k
+terminal, Delete from cursor to beginning of line,CTRL+u,CMD+u
+terminal, Delete word before cursor,CTRL+w,CMD+BACKSPACE
+app-management,Tile window to the left half of the screen,CTRL+SUPER+h,CTRL+OPT+h
+app-management,Tile window to the right half of the screen,CTRL+SUPER+l,CTRL+OPT+l
+app-management,Maximize window,CTRL+SUPER+k,CTRL+OPT+k
+app-management,Move window to the left screen,CTRL+SUPER+SHIFT+j,CTRL+OPT+SHIFT+h
+app-management,Move window to the right screen,CTRL+SUPER+SHIFT+l,CTRL+OPT+SHIFT+l
+app-management,Switch to App/Switch to next window of App,CTRL+SUPER+LETTER,CTRL+OPT+LETTER
+app-management,Open new window of App,CTRL+SUPER+SHIFT+LETTER,CTRL+OPT+SHIFT+LETTER
+app-management,Open App Launcher,ALT+SPACE,CMD+SPACE
+app-management,Quit Window,CTRL+SUPER+q,CTRL+OPT+q
+OS,Lock Screen,CTRL+SUPER+l,CTRL+OPT+l

@@ -54,3 +54,6 @@ https://github.com/ibraheemdev/modern-unix
 - get riod of ohmyzsh, use zinit?
 
 idea: launch everything from commandline and use something like dmenu to quickly use aliases for launching/switching etc.
+
+
+navi cheatsheets in one file?

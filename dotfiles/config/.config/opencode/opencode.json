@@ -8,6 +8,14 @@
         "-y",
         "chrome-devtools-mcp@latest"
       ]
+    },
+    "excalidraw": {
+      "type": "local",
+      "command": [
+        "npx",
+        "-y",
+        "@scofieldfree/excalidraw-mcp"
+      ]
     }
   }
 }

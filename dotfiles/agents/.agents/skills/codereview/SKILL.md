@@ -1,0 +1,4 @@
+- check that sufficient logs are given (for best practices, look at the loggin-best-practices skill)
+- look if edge cases are handled correctly
+- look at null value handling
+---> look at whiteboard notes I made

@@ -18,7 +18,7 @@ handle_fail() {
 
 
 ##########################
-# ???
+# utils
 ##########################
 sudo apt update && sudo apt upgrade -y
 sudo apt-get -q install -y xdg-utils || handle_fail "xdg-utils"
@@ -28,11 +28,15 @@ sudo apt-get -q install -y curl || handle_fail "curl"
 sudo apt-get -q install -y git || handle_fail "git"
 
 ##########################
+# utils
+##########################
+mkdir -p ~/work
+mkdir -p ~/personal
+mkdir -p ~/notes
+
+##########################
 # git setup
 ##########################
-# git directories
-mkdir ~/work
-mkdir ~/personal
 # lazygit
 LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | \grep -Po '"tag_name": *"v\K[^"]*')
 curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/download/v${LAZYGIT_VERSION}/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
@@ -71,17 +75,9 @@ curl https://sh.rustup.rs -sSf | sh || handle_fail "rust"
 source $HOME/.cargo/env
 
 ##########################
-# keyboard setup
-##########################
-git clone https://github.com/rvaiya/keyd
-cd keyd
-make && sudo make install
-sudo systemctl enable --now keyd
-
-##########################
 # terminal setup
 ##########################
-sudo apt-get -q install -y starship || handle_fail "starship"
+curl -sS https://starship.rs/install.sh | sh || handle_fail "starship"
 
 sudo apt-get -q install -y zsh || handle_fail "zsh"
 # Change shell to Zsh
@@ -108,9 +104,6 @@ fi
 ##########################
 # terminal tools
 ##########################
-sudo add-apt-repository ppa:maveonair/helix-editor
-sudo apt update
-sudo apt install helix
 sudo apt-get -q install -y gnome-tweak-tool || handle_fail "gnome-tweak-tool" # UI tool to customize GNOME desktop
 sudo apt-get -q install -y fzf || handle_fail "fzf" # Fuzzy finder for the command line
 sudo apt-get -q install -y xclip || handle_fail "xclip" # clipboard command line utility

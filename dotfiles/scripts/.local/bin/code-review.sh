@@ -3,35 +3,27 @@
 
 set -e
 
-DEFAULT_BASE="main"
 BASE_BRANCH="$DEFAULT_BASE"
 
 git fetch --all --prune
 
-# Determine BASE BRANCH (MR into BASE BRANCH)
-read -p "Use '$DEFAULT_BASE' as the base branch? [Y/n] " CONFIRM
-CONFIRM=${CONFIRM:-y}
-
-if [[ ! "$CONFIRM" =~ ^[Yy]$ ]]; then
-  BASE_BRANCH=$(git for-each-ref refs/heads --format='%(refname:short)' | fzf --height 10 --prompt="base branch> " --ansi)
-  if [ -z "$BASE_BRANCH" ]; then
-    echo "❌ No base branch selected."
-    exit 1
-  fi
-fi
-echo "Selected base branch: $BASE_BRANCH"
-
-# Determine BRANCH for code review
-BRANCH=$(git for-each-ref refs/heads refs/remotes --format='%(refname:short)' \
-  | grep -vx "^$BASE_BRANCH\$" \
-  | fzf --height 10 --prompt="cr branch> " --ansi)
-
-if [ -z "$BRANCH" ]; then
-  echo "❌ No CR branch selected."
+# Determine BASE BRANCH (PR target branch)
+BASE_BRANCH=$(git for-each-ref refs/heads --format='%(refname:short)' | fzf --height 10 --prompt="base branch> " --ansi)
+if [ -z "$BASE_BRANCH" ]; then
+  echo "❌ No target branch selected."
   exit 1
 fi
+echo "Selected target branch: $BASE_BRANCH"
 
-echo "Selected cr branch: $BRANCH"
+# Determine BRANCH for code review (PR source/feature branch)
+BRANCH=$(git for-each-ref refs/heads refs/remotes --format='%(refname:short)' \
+  | grep -vx "^$BASE_BRANCH\$" \
+  | fzf --height 10 --prompt="feature branch> " --ansi)
+if [ -z "$BRANCH" ]; then
+  echo "❌ No feature branch selected."
+  exit 1
+fi
+echo "Selected feature branch: $BRANCH"
 
 # Determine if the selected BRANCH is a remote branch
 if [[ "$BRANCH" == origin/* ]]; then
@@ -74,3 +66,7 @@ git reset --soft "${FIRST_COMMIT}^"
 echo "Done. Branch $BRANCH is now soft reset to its start relative to base $BASE_BRANCH."
 
 printf "\nAfter review and changes, run:\n\ngit reset --mixed ORIG_HEAD\n\n"
+
+printf "\nOpen branch in Intellij..\n\n"
+
+idea .
