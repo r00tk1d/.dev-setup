@@ -1,8 +1,21 @@
-# If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH=$HOME/.local/bin:$PATH
-export ZSH="$HOME/.oh-my-zsh"
-ZSH_THEME="avit"
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+# Load zsh options, keybindings, and completion
+[[ -f /usr/share/omarchy-zsh/shell/zoptions ]] && source /usr/share/omarchy-zsh/shell/zoptions
+
+# Load shared shell configuration (aliases, functions, environment, tool init)
+[[ -f /usr/share/omarchy-zsh/shell/all ]] && source /usr/share/omarchy-zsh/shell/all
+
+# Plugins
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
+source /usr/share/zsh/plugins/fzf-tab/fzf-tab.plugin.zsh
+
+# Undo omarchy's precmd hook that rebinds Tab back to its own router on every
+# prompt; fzf-tab needs Tab bound to fzf-tab-complete to work.
+add-zsh-hook -d precmd _omarchy-bind-tab-completion
+bindkey '^I' fzf-tab-complete
+
 
 # copy the current typed line to clipboard with ^Y
 copy_line_to_clipboard() {
@@ -12,6 +25,7 @@ copy_line_to_clipboard() {
 zle -N copy_line_to_clipboard
 bindkey '^Y' copy_line_to_clipboard
 
+# yazi
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
 	yazi "$@" --cwd-file="$tmp"
@@ -20,32 +34,12 @@ function y() {
 	rm -f -- "$tmp"
 }
 
-zstyle ':omz:update' mode auto      # update automatically without asking
 
-HIST_STAMPS="dd.mm.yyyy"
-
-plugins=(git fzf zsh-autosuggestions zsh-syntax-highlighting mvn fzf-tab)
-
-source $ZSH/oh-my-zsh.sh
-
-eval "$(zoxide init zsh)"
-# zoxide init zsh --cmd cd
+# plugins=(git) TODO set git aliases that I use
 source $HOME/.aliases
-
-# Open zellij on startup
-# eval "$(zellij setup --generate-auto-start zsh)"
-# Ctrl + G for opening navi
 
 # Ctrl + G for opening navi
 eval "$(navi widget zsh)"
 
-eval "$(starship init zsh)"
-
+# direnv
 eval "$(direnv hook zsh)"
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-export PATH="$HOME/.npm-global/bin:$PATH"
-# opencode
-export PATH="$HOME/.opencode/bin:$PATH"

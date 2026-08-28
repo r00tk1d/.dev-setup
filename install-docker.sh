@@ -1,3 +1,5 @@
 #!/bin/bash
 
-yay -S --noconfirm --needed docker docker-compose
+omarchy pkg add \
+    docker \
+    docker-compose
