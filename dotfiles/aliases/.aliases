@@ -1,3 +1,4 @@
+# launch apps
 alias lg="lazygit"
 alias c="code ."
 alias hr="herdr"
@@ -7,10 +8,9 @@ if [[ "$OSTYPE" == darwin* ]]; then
     alias pst="pbpaste"
     alias o="open"
 else
-    alias cpy="xclip -selection clipboard"
-    alias pst="xclip -selection clipboard -o"
+    alias cpy="wl-copy"
+    alias pst="wl-paste"
     alias o="xdg-open"
-    alias bat="batcat"
 fi
 
 # git
