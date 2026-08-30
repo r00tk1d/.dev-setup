@@ -1,4 +1,0 @@
-% psql
-
-# Connect to a database
-psql postgres://<username>:<password>@<host>:<port>/<db_name>

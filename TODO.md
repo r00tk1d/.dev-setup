@@ -47,4 +47,5 @@ use glab mr to create merge requests from command line and create a Teams messag
 ----------------------
 multi monitor setup
 other omarchy setups
-install plugins on brave-origin via command line?
+understand mise
+publish chrom plugins and add to auto script

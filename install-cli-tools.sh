@@ -5,4 +5,15 @@
 # zoxide: smarter cd | direnv: env vars per directory | navi: cheat sheets
 # helix: editor | zellij: multiplexer | yazi: file manager | lazygit: git TUI
 # wl-clipboard: Wayland clipboard | postgresql: psql client
-yay -S --noconfirm --needed fzf ripgrep jq gron bat zoxide direnv navi helix zellij yazi lazygit wl-clipboard postgresql
+omarchy pkg add \
+    fzf \
+    ripgrep \
+    jq \
+    gron \
+    bat \
+    zoxide \
+    direnv \
+    yazi \
+    lazygit \
+    wl-clipboard \
+    postgresql

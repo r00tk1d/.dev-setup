@@ -11,7 +11,9 @@ UPDATE_URL="https://clients2.google.com/service/update2/crx"
 KEEPASSXC_BROWSER_ID="oboonakemofpalcgghocfoadofidjkkk"
 VIMIUM_C_ID="hfjbmagddngcpeloejdejnfgbamkjaeg"
 
-if [[ "$EUID" -ne 0 ]]; then
+# Brave only reads policies from /etc/brave/policies/managed
+# (per-user ~/.config/brave/policies is NOT supported).
+if [[ "$EUID" -ne 0 && ! -w "$POLICY_DIR" ]]; then
     echo "Run this script with sudo:"
     echo "  sudo $0"
     exit 1
@@ -28,14 +30,10 @@ if [[ "${1:-}" == "uninstall" ]]; then
         echo "Policy file does not exist: $POLICY_FILE"
     fi
 
-    # Remove empty directories, if possible
-    rmdir "$POLICY_DIR" 2>/dev/null || true
-    rmdir "$(dirname "$POLICY_DIR")" 2>/dev/null || true
-
     echo
     echo "Done."
     echo
-    echo "Restart Brave to remove the force-installed extensions."
+    echo "Restart Brave to remove the policy-installed extensions."
     echo
     echo "Then verify at:"
     echo "  brave://policy"
@@ -48,12 +46,19 @@ mkdir -p "$POLICY_DIR"
 
 echo "Configuring KeePassXC Browser and Vimium C..."
 
+# normal_installed: auto-installs but lets the user uninstall/disable in the browser.
 cat > "$POLICY_FILE" <<EOF
 {
-  "ExtensionInstallForcelist": [
-    "${KEEPASSXC_BROWSER_ID};${UPDATE_URL}",
-    "${VIMIUM_C_ID};${UPDATE_URL}"
-  ]
+  "ExtensionSettings": {
+    "${KEEPASSXC_BROWSER_ID}": {
+      "installation_mode": "normal_installed",
+      "update_url": "${UPDATE_URL}"
+    },
+    "${VIMIUM_C_ID}": {
+      "installation_mode": "normal_installed",
+      "update_url": "${UPDATE_URL}"
+    }
+  }
 }
 EOF
 
@@ -76,5 +81,8 @@ echo "Restart Brave, then verify at:"
 echo "  brave://policy"
 
 echo
-echo "To uninstall these extensions:"
+echo "Users can uninstall/disable these extensions in the browser at:"
+echo "  brave://extensions"
+echo
+echo "To remove the policy instead:"
 echo "  sudo $0 uninstall"
