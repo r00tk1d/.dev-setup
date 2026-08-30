@@ -1,33 +1,27 @@
 #!/bin/bash
 
-prefix="BSE-"
-
 commitMsgFile=$1
 message=$(<"$commitMsgFile")
 
 # Get the current branch name
 branchName=$(git rev-parse --abbrev-ref HEAD)
 
-# Check if the branch name contains the ticket prefix
-if [[ "$branchName" == *"$prefix"* ]]; then
-  ticketID=$(echo "$branchName" | grep -o "$prefix[0-9]\+")
+# Automatically extract the Jira ticket ID from the branch name.
+# Matches an uppercase project key followed by a hyphen and digits, e.g.
+# feature/ABCD-1243-asdf or bugfix/DRET-423-gfg-fg-sfg.
+ticketID=$(echo "$branchName" | grep -oE '[A-Z][A-Z0-9]+-[0-9]+' | head -n 1)
 
-  if [[ $message =~ $ticketID ]]; then
-  echo "The commit message already contains a ticket ID."
-  exit 0
-  fi
-  
-  if [[ -z $ticketID ]]; then
-      echo "Could not extract the ticket ID."
-      exit 1
-  fi
-
-  # Prepend ticket ID to commit message
-  output="$ticketID: $message"
-  echo "$output" > "$commitMsgFile"
-  echo "Updated commit message: $output"
-
-else
-  echo "The current branch name does not contain the ticket ID '$prefix'. Skip prepending ticket id..."
+if [[ -z $ticketID ]]; then
+  echo "The current branch name does not contain a Jira ticket ID. Skip prepending ticket id..."
   exit 0
 fi
+
+if [[ $message =~ $ticketID ]]; then
+  echo "The commit message already contains a ticket ID."
+  exit 0
+fi
+
+# Prepend ticket ID to commit message
+output="$ticketID: $message"
+echo "$output" > "$commitMsgFile"
+echo "Updated commit message: $output"
