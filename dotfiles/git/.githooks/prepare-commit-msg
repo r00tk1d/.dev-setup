@@ -16,6 +16,11 @@ if [[ -z $ticketID ]]; then
   exit 0
 fi
 
+if [[ -z $message ]]; then
+  echo "Commit message is empty. Skip prepending ticket id..."
+  exit 0
+fi
+
 if [[ $message =~ $ticketID ]]; then
   echo "The commit message already contains a ticket ID."
   exit 0
