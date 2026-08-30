@@ -7,4 +7,13 @@
 #   Runtime -> native Wayland); Ultimate features unlock with a subscription,
 #   otherwise fully functional free tier
 # visual-studio-code-bin / spotify from AUR
-yay -S --noconfirm --needed synology-drive brave-origin-bin keepassxc dbeaver libreoffice-fresh libreoffice-fresh-de intellij-idea-ultimate-edition visual-studio-code-bin spotify
+omarchy pkg add \
+    synology-drive \
+    brave-origin-bin \
+    keepassxc \
+    dbeaver \
+    libreoffice-fresh \
+    libreoffice-fresh-de \
+    intellij-idea-ultimate-edition \
+    visual-studio-code-bin \
+    spotify

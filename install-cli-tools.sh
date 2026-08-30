@@ -15,5 +15,8 @@ omarchy pkg add \
     direnv \
     yazi \
     lazygit \
+    lazydocker \
     wl-clipboard \
-    postgresql
+    postgresql \
+    k9s \
+    opencode

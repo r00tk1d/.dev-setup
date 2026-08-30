@@ -24,3 +24,4 @@
         1. `yay -S kanata`
         2. Give kanata access to `/dev/uinput` (uinput group + udev rule, see kanata wiki)
         3. Autostart via Hyprland: `exec-once = kanata -c <path-to>/default.conf`
+8. connect keepass-xc plugin with DB

@@ -75,6 +75,7 @@ Linked into `$HOME` with [lnko](https://github.com/luanvil/lnko):
 | bash | `.bashrc` |
 | zsh | `.zshrc` |
 | git | `.gitconfig`, `.gitconfig-personal`, `.githooks` |
+| brave | `.config/BraveSoftware/Brave-Origin/NativeMessagingHosts/*.json` |
 | brave-origin | `.config/brave-origin-flags.conf` |
 | starship | `.config/starship.toml` |
 | zellij | `.config/zellij/config.kdl` |
