@@ -46,7 +46,7 @@ mkdir -p "$POLICY_DIR"
 
 echo "Configuring KeePassXC Browser and Vimium C..."
 
-# normal_installed: auto-installs but lets the user uninstall/disable in the browser.
+# normal_installed: auto-installs; users can only disable (not uninstall) in the browser.
 cat > "$POLICY_FILE" <<EOF
 {
   "ExtensionSettings": {
@@ -81,8 +81,9 @@ echo "Restart Brave, then verify at:"
 echo "  brave://policy"
 
 echo
-echo "Users can uninstall/disable these extensions in the browser at:"
+echo "Policy-installed extensions cannot be uninstalled in the browser;"
+echo "users can only disable them at:"
 echo "  brave://extensions"
 echo
-echo "To remove the policy instead:"
+echo "To remove the policy (and the extensions) instead:"
 echo "  sudo $0 uninstall"
