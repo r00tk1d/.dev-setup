@@ -11,6 +11,54 @@ UPDATE_URL="https://clients2.google.com/service/update2/crx"
 KEEPASSXC_BROWSER_ID="oboonakemofpalcgghocfoadofidjkkk"
 VIMIUM_C_ID="hfjbmagddngcpeloejdejnfgbamkjaeg"
 
+# cloning my plugins into ~/git
+GIT_DIR="${HOME}/git"
+
+REPOS=(
+    "git@github.com:r00tk1d/power-tabs.git"
+    "git@github.com:r00tk1d/jira-branch-name-generator.git"
+    "git@github.com:r00tk1d/mru-tab-switcher.git"
+)
+
+echo "Cloning into ${GIT_DIR}..."
+
+# These repos are cloned via SSH, so verify SSH is set up before attempting.
+if [[ ! -f "${HOME}/.ssh/id_ed25519" && ! -f "${HOME}/.ssh/id_rsa" ]]; then
+    echo "No SSH key found in ${HOME}/.ssh" >&2
+    echo "Generate one with:  ssh-keygen -t ed25519 -C \"$(whoami)@$(hostname)\"" >&2
+    echo "Then add the public key to GitHub:  https://github.com/settings/ssh/new" >&2
+    exit 1
+fi
+
+echo "Testing SSH authentication to GitHub..."
+if ! ssh -o BatchMode=yes -o StrictHostKeyChecking=accept-new -T git@github.com 2>/dev/null; then
+    echo "WARNING: Could not authenticate to GitHub over SSH." >&2
+    echo "         The SSH key may not be registered, or the agent is not running." >&2
+    echo "         Add your key to GitHub or start ssh-agent and run ssh-add." >&2
+    exit 1
+fi
+
+mkdir -p "$GIT_DIR"
+
+for repo in "${REPOS[@]}"; do
+    name="$(basename "$repo" .git)"
+
+    if [ -d "$GIT_DIR/$name" ]; then
+        echo "  already present:    $name (skipping)"
+        continue
+    fi
+
+    echo "  cloning:            $name"
+    if ! git clone "$repo" "$GIT_DIR/$name"; then
+        echo "  FAILED to clone:   $repo" >&2
+        exit 1
+    fi
+done
+
+echo
+echo "Done. Cloned into ${GIT_DIR}:"
+ls -1 "$GIT_DIR"
+
 # Brave only reads policies from /etc/brave/policies/managed
 # (per-user ~/.config/brave/policies is NOT supported).
 if [[ "$EUID" -ne 0 && ! -w "$POLICY_DIR" ]]; then
