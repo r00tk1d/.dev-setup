@@ -1,0 +1,27 @@
+[user]
+    name = Michael Hirsch
+    email = r00tk1d@users.noreply.github.com
+[core]
+	autocrlf = input
+	hooksPath = $HOME/.config/git/hooks
+[init]
+	defaultBranch = main
+[push]
+	autoSetupRemote = true 
+[pull]
+	rebase = true
+[diff]
+    algorithm = histogram
+    colorMoved = plain
+    mnemonicPrefix = true
+[commit]
+    verbose = true
+[column]
+    ui = auto
+[branch]
+    sort = -committerdate
+[tag]
+    sort = -version:refname
+[rerere]
+    enabled = true
+    autoupdate = true
