@@ -1,6 +1,5 @@
 [user]
     name = Michael Hirsch
-    email = r00tk1d@users.noreply.github.com
 [core]
 	autocrlf = input
 	hooksPath = $HOME/.config/git/hooks
