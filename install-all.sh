@@ -6,10 +6,7 @@
 . ./install-zsh.sh
 . ./install-starship.sh
 . ./install-cli-tools.sh
-. ./install-python.sh
-. ./install-java.sh
-. ./install-nodejs.sh
-. ./install-rust.sh
+. ./install-dev-envs.sh
 . ./install-docker.sh
 . ./install-gui-apps.sh
 . ./install-dotfiles.sh

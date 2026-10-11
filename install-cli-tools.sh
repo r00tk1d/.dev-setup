@@ -1,10 +1,5 @@
 #!/bin/bash
 
-# Install terminal tools
-# fzf: fuzzy finder | ripgrep: fast search | jq/gron: JSON | bat: cat clone
-# zoxide: smarter cd | direnv: env vars per directory | navi: cheat sheets
-# helix: editor | zellij: multiplexer | yazi: file manager | lazygit: git TUI
-# wl-clipboard: Wayland clipboard | postgresql: psql client
 omarchy pkg add \
     fzf \
     ripgrep \
@@ -17,6 +12,6 @@ omarchy pkg add \
     lazygit \
     lazydocker \
     wl-clipboard \
-    postgresql \
+    postgresql-libs \
     k9s \
     opencode

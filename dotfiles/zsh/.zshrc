@@ -38,8 +38,5 @@ function y() {
 # plugins=(git) TODO set git aliases that I use
 source $HOME/.aliases
 
-# Ctrl + G for opening navi
-eval "$(navi widget zsh)"
-
 # direnv
 eval "$(direnv hook zsh)"

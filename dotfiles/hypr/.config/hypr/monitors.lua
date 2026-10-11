@@ -5,10 +5,10 @@ local omarchy_gdk_scale = 1
 local omarchy_monitor_scale = 1.25
 
 hl.env("GDK_SCALE", tostring(omarchy_gdk_scale))
+-- Fallback for any monitor not otherwise placed. The actual layout (external
+-- monitors on the left, internal panel on the right) is managed dynamically by
+-- scripts/arrange-monitors.sh, which runs on start and on every monitor hotplug.
 hl.monitor({ output = "", mode = "preferred", position = "auto", scale = omarchy_monitor_scale })
-
-hl.monitor({ output = "DP-2", mode = "preferred", position = "0x0", scale = omarchy_monitor_scale })
-hl.monitor({ output = "eDP-1", mode = "preferred", position = "2752x80", scale = omarchy_monitor_scale })
 
 -- Configure a specific monitor.
 -- hl.monitor({ output = "DP-2", mode = "2560x1440@144", position = "0x0", scale = 1 })

@@ -1,6 +1,6 @@
 My developer setup on [Omarchy](https://omarchy.org/) (Arch + Hyprland + Wayland).
 
-Uses packages from official Arch repo if possible and AUR for some other packages.
+Installs go through Omarchy (`omarchy pkg add`, `omarchy install <browser|editor|dev-env|service|...>`); AUR via `yay` where no Omarchy equivalent exists.
 
 
 # Quickstart
@@ -16,7 +16,7 @@ cd $HOME/.dev-setup && ./install-all.sh
 Or run the `install-*.sh` scripts individually.
 3. Set Zsh as login shell:
 ```bash
-./set-shell.sh
+./setup-zsh.sh
 ```
 4. Apply Manual Settings in `/manual-settings`
 
@@ -40,8 +40,6 @@ Set it in Hyprland (`kb_layout = eu`) and use the [kenkyo](https://github.com/ar
     - [fzf-tab](https://github.com/Aloxaf/fzf-tab)
     - bundled plugins: git, fzf, mvn
 - [starship](https://github.com/starship/starship)
-- [zellij](https://zellij.dev/)
-- [helix](https://helix-editor.com/)
 - [JetBrains Mono Nerd Font](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/JetBrainsMono)
 
 ## CLI-Apps
@@ -51,11 +49,11 @@ Set it in Hyprland (`kb_layout = eu`) and use the [kenkyo](https://github.com/ar
 - [jq](https://github.com/stedolan/jq) + gron
 - [bat](https://github.com/sharkdp/bat)
 - [zoxide](https://github.com/ajeetdsouza/zoxide)
-- [navi](https://github.com/denisidoro/navi) (cheatsheets in `dotfiles/navi`)
 - [yazi](https://github.com/sxyazi/yazi)
 - [direnv](https://github.com/direnv/direnv)
 - psql client
 - [wl-clipboard](https://github.com/ooghent/wl-clipboard) (`^Y` copies the typed line)
+- [k9s](https://k9scli.io/) + [opencode](https://opencode.ai/docs/)
 
 ## Programming Languages
 - all managed with mise
@@ -64,7 +62,8 @@ Set it in Hyprland (`kb_layout = eu`) and use the [kenkyo](https://github.com/ar
 - [docker](https://www.docker.com/) + docker-compose
 
 ## GUI-Apps
-- brave, keepassxc, dbeaver, libreoffice, intellij, vscode, spotify
+- brave, keepassxc, dbeaver, libreoffice, intellij, vscode, spotify, discord
+- synology-drive via AUR
 
 ## Dotfiles
 Linked into `$HOME` with [lnko](https://github.com/luanvil/lnko):
@@ -75,25 +74,29 @@ Linked into `$HOME` with [lnko](https://github.com/luanvil/lnko):
 | bash | `.bashrc` |
 | zsh | `.zshrc` |
 | git | `.gitconfig`, `.gitconfig-personal`, `.githooks` |
-| brave | `.config/BraveSoftware/Brave-Origin/NativeMessagingHosts/*.json` |
 | brave-origin | `.config/brave-origin-flags.conf` |
-| starship | `.config/starship.toml` |
-| zellij | `.config/zellij/config.kdl` |
-| helix | `.config/helix/config.toml` |
+| hypr | `.config/hypr/*` |
 | opencode | `.config/opencode/opencode.json` |
-| navi | `.local/share/navi/cheats` |
 | scripts | `.local/bin/*.sh` |
 | agents | `.agents/skills` |
 
-Git commit hooks live in `~/.githooks` (see `core.hooksPath` in `.gitconfig`).
+The git config is skipped in git (`git update-index --skip-worktree`) so personal/work-dependent settings (like email) don't affect the repo.
+To re-enable tracking: `git update-index --no-skip-worktree dotfiles/git/.config/git/config`
+To disable tracking again: `git update-index --skip-worktree dotfiles/git/.config/git/config`
 
 ## Window Management
 Not ported yet: the old wmctrl/skhd app-switching workflow is X11/macOS-only. Hyprland-native equivalents are tracked in `TODO.md`.
 
 # Auto Setups
-- packages (install-all.sh)
+- packages (`install-all.sh`, one script per group; dev-envs combined in `install-dev-envs.sh`)
 - dotfiles (lnko)
 - ssh key generation hint: see `manual-settings/README.md`
 
 # Manual Setups
 See `/manual-settings/README.md`.
+
+
+# Cool stuff
+- jira branchn name generator with git hook
+- vimiumC jira ticket opener
+- phone blank space hyprland

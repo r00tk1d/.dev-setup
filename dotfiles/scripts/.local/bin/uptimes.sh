@@ -21,23 +21,3 @@ uptime=$(last | grep -m15 reboot | awk '{print $5, $6, $7, $8, $9, $10, $11}')
 echo "$uptime" | while read -r line; do
   echo "$line"
 done
-
-
-
-# | sed "s/still running/$(date +'%H:%M')../"
-
-
-# # uptime
-# last | grep -m10 reboot
-
-# # for getting Locking events
-# gdbus monitor -y -d org.freedesktop.login1 | grep LockedHint
-
-
-# idea: uptime - screenLocked = worktime
-# in file saven? immer 10 oder so speichern
-
-
-# Write timestamps of locking and unlocking in a logfile. This should be in a separate .sh file which is executed on startup
-# gdbus monitor -y -d org.freedesktop.login1 | grep LockedHint > logfile.txt
-# gdbus monitor -y -d org.freedesktop.login1 | grep "'LockedHint': <false>"
