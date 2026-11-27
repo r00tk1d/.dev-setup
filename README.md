@@ -78,6 +78,7 @@ Linked into `$HOME` with [lnko](https://github.com/luanvil/lnko):
 | hypr | `.config/hypr/*` |
 | opencode | `.config/opencode/opencode.json` |
 | scripts | `.local/bin/*.sh` |
+| cheatsheet | `.config/cheatsheet/commands` |
 | agents | `.agents/skills` |
 
 The git config is skipped in git (`git update-index --skip-worktree`) so personal/work-dependent settings (like email) don't affect the repo.

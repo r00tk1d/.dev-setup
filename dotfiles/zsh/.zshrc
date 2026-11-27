@@ -34,6 +34,23 @@ function y() {
 	rm -f -- "$tmp"
 }
 
+# cheatsheet picker (^G): inserts a command from ~/.config/cheatsheet/commands
+_cheatsheet_widget() {
+	local file="${XDG_CONFIG_HOME:-$HOME/.config}/cheatsheet/commands"
+	[[ -f $file ]] || { zle -M "cheatsheet: $file not found"; zle reset-prompt; return 1; }
+	local selected
+	selected=$(awk '
+		/^#/ { desc = $0; next }
+		desc != "" && /[^[:space:]]/ { printf "%s\n%s\0", desc, $0; desc = "" }
+		/^[[:space:]]*$/ { desc = "" }
+	' "$file" | fzf --read0 --prompt='cheatsheet> ' --height=40% --reverse)
+	[[ -n $selected ]] || { zle reset-prompt; return 0; }
+	LBUFFER=${selected#*$'\n'}
+	zle reset-prompt
+}
+zle -N _cheatsheet_widget
+bindkey '^G' _cheatsheet_widget
+
 
 # plugins=(git) TODO set git aliases that I use
 source $HOME/.aliases

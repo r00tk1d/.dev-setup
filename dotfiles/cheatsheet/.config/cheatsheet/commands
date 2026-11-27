@@ -1,0 +1,207 @@
+# Cheatsheet commands: "# comment" line followed by the command line.
+# Pick with Ctrl+G in zsh (inserts into the prompt, no history changes).
+
+# git: commit
+git commit
+
+# git: commit with message
+git commit -m ""
+
+# git: amend last commit
+git commit --amend
+
+# git: amend last commit without editing message
+git commit --amend --no-edit
+
+# git: push to origin
+git push origin
+
+# git: force-push to origin (with lease)
+git push origin --force-with-lease
+
+# git: undo last commit, keep changes staged
+git reset --soft HEAD~1
+
+# git: discard all local changes
+git reset --hard HEAD
+
+# git: compact log graph
+git log --oneline --graph --decorate
+
+# git: pretty log graph
+git log --color --graph --pretty=format:'%Cred%h%Creset-%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+
+# git: create and switch to new branch
+git checkout -b
+
+# git: list local branches
+git branch
+
+# git: list branches with last commit
+git branch -v
+
+# git: delete merged branch
+git branch -d
+
+# git: force-delete branch
+git branch -D
+
+# git: rename current branch
+git branch -m
+
+# git: stash changes
+git stash
+
+# git: apply and drop latest stash
+git stash pop
+
+# git: list stashes
+git stash list
+
+# git: show stash diff
+git stash show -p
+
+# git: clear all stashes
+git stash clear
+
+# git: cherry-pick commit
+git cherry-pick
+
+# git: pull from origin
+git pull origin
+
+# git: fetch all remotes and prune
+git fetch --all --prune
+
+# git: push
+git push
+
+# git: force-push (with lease)
+git push --force-with-lease
+
+# git: rebase
+git rebase
+
+# git: abort rebase
+git rebase --abort
+
+# git: continue rebase
+git rebase --continue
+
+# docker: list running containers
+docker ps
+
+# docker: list all containers
+docker ps -a
+
+# docker: follow container logs
+docker logs -f <container>
+
+# docker: exec shell in container
+docker exec -it <container> sh
+
+# docker: stop and remove container
+docker rm -f <container>
+
+# docker: list images
+docker images
+
+# docker: remove dangling images/build cache
+docker system prune
+
+# docker compose: start services (detached)
+docker compose up -d
+
+# docker compose: stop and remove services
+docker compose down
+
+# docker compose: rebuild and start services
+docker compose up -d --build
+
+# docker compose: follow service logs
+docker compose logs -f <service>
+
+# docker compose: list service status
+docker compose ps
+
+# docker compose: exec shell in service
+docker compose exec <service> sh
+
+# kubectl: get pods in current namespace
+kubectl get pods
+
+# kubectl: get pods in all namespaces
+kubectl get pods -A
+
+# kubectl: describe pod
+kubectl describe pod <pod>
+
+# kubectl: follow pod logs
+kubectl logs -f <pod>
+
+# kubectl: exec shell in pod
+kubectl exec -it <pod> -- sh
+
+# kubectl: apply manifest
+kubectl apply -f <file.yaml>
+
+# kubectl: get current context
+kubectl config current-context
+
+# kubectl: switch context
+kubectl config use-context <context>
+
+# http: GET request with headers/body
+curl -i <url>
+
+# http: POST JSON
+curl -i -X POST <url> -H 'Content-Type: application/json' -d '{"key":"value"}'
+
+# http: request with bearer token
+curl -i <url> -H 'Authorization: Bearer <token>'
+
+# psql: connect to database
+psql -h <host> -U <user> -d <db>
+
+# psql: run SQL command
+psql -h <host> -U <user> -d <db> -c 'SELECT 1;'
+
+# jq: pretty-print JSON
+jq .
+
+# jq: extract field
+jq -r '.<field>'
+
+# ripgrep: search text in files
+rg '<pattern>'
+
+# ripgrep: search text in files (include hidden/ignored)
+rg -uu '<pattern>'
+
+# network: show listening TCP ports
+ss -tlnp
+
+# network: test TCP port reachability
+nc -vz <host> <port>
+
+# process: find process by name
+pgrep -a <name>
+
+# process: kill process by PID
+kill <pid>
+
+# systemd: follow unit logs
+journalctl -fu <unit>
+
+# systemd: service status
+systemctl status <unit>
+
+# systemd: restart service
+sudo systemctl restart <unit>
+
+# mise: install tools from config
+mise install
+
+# mise: show active tool versions
+mise current
+
